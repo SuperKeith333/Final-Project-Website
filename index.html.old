@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+                Can Gene Expression Help Us Understand Colon Cancer?
+        </title>
+
+        <link rel="stylesheet" href="style.css">
+
+        </head>
+
+
+        <body>
+
+
+                <!-- Progress Bar -->
+
+                <div id="progress-container">
+                        <div id="progress-bar"></div>
+                </div>
+
+
+
+                <!-- Navigation -->
+
+                <nav>
+
+                        <a href="#home">Home</a>
+
+                        <a href="#research">Research</a>
+
+                        <a href="#algorithm">Algorithm</a>
+
+                        <a href="#results">Results</a>
+
+                        <a href="#conclusion">Conclusion</a>
+
+                </nav>
+
+
+
+
+
+                <!-- =========================
+                        HOME
+                ========================= -->
+
+
+                <section id="home" class="hero">
+
+
+                        <div class="hero-content">
+
+
+                                <h1 class="reveal">
+
+                                        Can Gene Expression
+                                        <br>
+                                        Help Us Understand
+                                        <br>
+                                        Colon Cancer?
+
+                                </h1>
+
+
+
+                                <p class="reveal">
+
+                                Using microarray analysis to identify
+                                differences in gene expression between
+                                healthy and cancer tissue.
+
+                                </p>
+
+
+
+                                <a onclick="scrollToSection('research')" 
+                                class="button reveal">
+
+                                Start Exploring ↓
+
+                                </a>
+
+
+                        </div>
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                        PART 1 RESEARCH
+                ========================= -->
+
+
+                <section id="research" class="chapter">
+
+
+
+                <h1 class="chapter-title reveal">
+
+                PART 1
+
+                <br>
+
+                RESEARCH
+
+                </h1>
+
+
+
+                <p class="chapter-subtitle reveal">
+
+                Understanding the biological problem
+                before analyzing the data.
+
+                </p>
+
+
+
+
+
+
+
+                <!-- =========================
+                        SECTION 1
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+                        <h2 class="reveal">
+
+                        Why Does This Matter?
+
+                        </h2>
+
+
+
+                        <p class="reveal">
+
+                        Colon cancer is one of the most common
+                        types of cancer worldwide. It develops
+                        when cells in the colon accumulate
+                        changes that disrupt normal growth
+                        and function.
+
+                        </p>
+
+
+
+                        <div class="stats">
+
+
+
+                                <div class="stat reveal">
+
+                                        <h3>
+
+                                        1.9 Million
+
+                                        </h3>
+
+                                        <p>
+
+                                        New cases of colorectal cancer
+                                        each year worldwide.
+
+                                        </p>
+
+                                </div>
+
+
+
+
+                                <div class="stat reveal">
+
+                                        <h3>
+
+                                        900,000+
+
+                                        </h3>
+
+                                        <p>
+
+                                        Deaths caused by colorectal cancer
+                                        each year.
+
+                                        </p>
+
+                                </div>
+
+
+
+
+                                <div class="stat reveal">
+
+                                        <h3>
+
+                                        #3
+
+                                        </h3>
+
+                                        <p>
+
+                                        Most common cancer worldwide.
+
+                                        </p>
+
+                                </div>
+
+
+
+                        </div>
+
+
+
+
+
+                        <h3 class="reveal">
+                        Who is most affected?
+                        </h3> // NOTE MAKE SPACING BIGGER
+
+
+                        <div class="center-content reveal">
+
+                        <p>
+
+                        Colon cancer predominantly affects older
+                        adults, especially people over the age
+                        of 50. However, younger cases are
+                        increasing.
+
+                        </p>
+
+
+                        <p>
+
+                        Risk factors include:
+
+                        </p>
+
+
+                        <ul>
+
+                        <li>
+                        High intake of processed meats
+                        </li>
+
+                        <li>
+                        Low intake of fruits and vegetables
+                        </li>
+
+                        <li>
+                        Sedentary lifestyle
+                        </li>
+
+                        <li>
+                        Obesity
+                        </li>
+
+                        <li>
+                        Family history of colon cancer
+                        </li>
+
+                        </ul>
+
+                        </div>
+
+
+
+
+
+                        <h3 class="symptoms-title reveal">
+
+                        Symptoms
+
+                        </h3>
+
+
+
+                        <div class="center-content reveal">
+
+                        <p>
+                        Common symptoms include:
+                        </p>
+
+                        <ul>
+
+                        <li>Diarrhea or constipation</li>
+
+                        <li>Blood in stool</li>
+
+                        <li>Abdominal pain</li>
+
+                        <li>Unexplained weight loss</li>
+
+                        <li>Fatigue and low iron levels</li>
+
+                        </ul>
+
+                        </div>
+
+
+
+                        <p class="reveal highlight center-text">
+
+                        Many people show no symptoms
+                        during early stages, making detection
+                        difficult.
+
+                        </p>
+
+
+
+
+
+                        </section>
+
+
+
+
+
+                        <!-- =========================
+                        EARLY DETECTION
+                        ========================= -->
+
+
+                <section class="subsection">
+
+
+
+                <h2 class="reveal">
+
+                Why Early Diagnosis Matters
+
+                </h2>
+
+
+
+                <p class="reveal">
+
+                Early detection greatly improves the
+                chance of successful treatment.
+                Treatments are often more effective
+                before the cancer spreads.
+
+                </p>
+
+
+
+                <div class="card-grid">
+
+
+
+                <div class="card reveal">
+
+                <h3>
+
+                Screening
+
+                </h3>
+
+
+                <p>
+
+                Regular screening can detect
+                cancer before symptoms appear.
+
+                </p>
+
+
+                </div>
+
+
+
+
+                <div class="card reveal">
+
+                <h3>
+
+                Surgery
+
+                </h3>
+
+
+                <p>
+
+                Often used when cancer is detected
+                at earlier stages.
+
+                </p>
+
+
+                </div>
+
+
+
+
+                <div class="card reveal">
+
+                <h3>
+
+                Treatment Options
+
+                </h3>
+
+
+                <p>
+
+                Includes chemotherapy, radiation,
+                targeted therapy, and immunotherapy.
+
+                </p>
+
+
+                </div>
+
+
+
+                </div>
+
+
+
+                </section>
+
+
+
+
+
+                <!-- =========================
+                END OF PART 1
+                ========================= -->
+
+                <!-- =========================
+                WHY GENE CHANGES MATTER
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Why Do Gene Changes Happen During Cancer?
+
+                </h2>
+
+
+
+                <p class="reveal">
+
+                Cancer occurs when changes in DNA disrupt
+                the normal instructions that control how
+                cells grow, divide, and repair themselves.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                These changes can cause genes involved
+                in cell growth, DNA repair, and immune
+                response to become incorrectly regulated.
+
+                </p>
+
+
+
+                <div class="card-grid">
+
+
+                <div class="card reveal">
+
+                <h3>
+                Normal Cell
+                </h3>
+
+                <p>
+
+                Genes controlling growth and repair
+                are properly regulated.
+
+                </p>
+
+                </div>
+
+
+
+                <div class="card reveal">
+
+                <h3>
+                Cancer Cell
+                </h3>
+
+                <p>
+
+                Some genes become overactive while
+                others become inactive, changing
+                cell behavior.
+
+                </p>
+
+                </div>
+
+
+
+                </div>
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                GENE EXPRESSION
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+
+                <h2 class="reveal">
+
+                What Is Gene Expression?
+
+                </h2>
+
+
+
+                <p class="reveal">
+
+                Almost every cell in the human body
+                contains the same DNA. However,
+                different cells use different genes,
+                allowing them to perform specialized
+                functions.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                Genes are sections of DNA that contain
+                instructions for creating RNA and
+                proteins. The process of using these
+                instructions is called gene expression.
+
+                </p>
+
+
+
+
+                <!-- DNA FLOW ANIMATION -->
+
+
+                <div class="gene-flow">
+
+
+                <div class="gene-box reveal">
+
+                DNA
+
+                <span>
+
+                Stored genetic instructions
+
+                </span>
+
+                </div>
+
+
+
+                <div class="arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="gene-box reveal">
+
+                mRNA
+
+                <span>
+
+                A copied version of the instructions
+
+                </span>
+
+                </div>
+
+
+
+                <div class="arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="gene-box reveal">
+
+                Protein
+
+                <span>
+
+                Molecules that perform functions
+                inside cells
+
+                </span>
+
+                </div>
+
+
+
+                <div class="arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="gene-box reveal">
+
+                Cell Behavior
+
+                <span>
+
+                Growth, repair, and function
+
+                </span>
+
+                </div>
+
+
+                </div>
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                What Does It Mean For A Gene To Be
+                "Turned On" Or "Turned Off"?
+
+                </h2>
+
+
+
+                <div class="card-grid">
+
+
+                <div class="card reveal">
+
+
+                <h3>
+
+                Gene Turned On
+
+                </h3>
+
+
+                <p>
+
+                A more active gene produces more
+                mRNA and more proteins.
+
+                </p>
+
+
+                <p class="highlight">
+
+                Higher gene expression
+
+                </p>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="card reveal">
+
+
+                <h3>
+
+                Gene Turned Off
+
+                </h3>
+
+
+                <p>
+
+                A less active gene produces less
+                mRNA and fewer proteins.
+
+                </p>
+
+
+                <p class="highlight">
+
+                Lower gene expression
+
+                </p>
+
+
+                </div>
+
+
+
+                </div>
+
+
+
+                <p class="reveal">
+
+                In cancer cells, normal gene regulation
+                can become disrupted. Some genes may
+                become unusually active while others
+                become less active.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                By comparing gene expression patterns
+                between healthy and tumor tissue, we
+                can identify these differences.
+
+                </p>
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                MICROARRAY
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+
+                <h2 class="reveal">
+
+                How Can We Measure Gene Expression?
+
+                </h2>
+
+
+
+                <p class="reveal">
+
+                DNA microarrays are a technology used
+                to measure the expression levels of
+                thousands of genes at the same time.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                They allow scientists to determine which
+                genes are highly active and which genes
+                have low activity.
+
+                </p>
+
+
+
+
+                <h3 class="microarray-title reveal">
+
+                How Does A DNA Microarray Work?
+
+                </h3>
+
+
+
+
+
+                <div class="pipeline">
+
+
+
+                <div class="pipeline-step reveal">
+
+                1.
+                <br>
+
+                Collect Tissue Samples
+
+                <p>
+
+                Healthy and cancer samples are collected
+                for comparison.
+
+                </p>
+
+                </div>
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="pipeline-step reveal">
+
+                2.
+                <br>
+
+                Extract RNA
+
+                <p>
+
+                RNA provides information about which
+                genes are being used.
+
+                </p>
+
+                </div>
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+
+                <div class="pipeline-step reveal">
+
+                3.
+                <br>
+
+                Convert RNA Into cDNA
+
+                <p>
+
+                RNA is converted into a more stable form
+                called complementary DNA.
+
+                </p>
+
+                </div>
+
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="pipeline-step reveal">
+
+                4.
+                <br>
+
+                Add Fluorescent Labels
+
+                <p>
+
+                Labels allow the amount of genetic
+                material to be detected.
+
+                </p>
+
+                </div>
+
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+
+                <div class="pipeline-step reveal">
+
+                5.
+                <br>
+
+                Hybridize To Microarray Chip
+
+                <p>
+
+                cDNA binds to matching DNA probes
+                on the chip.
+
+                </p>
+
+                </div>
+
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+
+                <div class="pipeline-step reveal">
+
+                6.
+                <br>
+
+                Analyze Expression Data
+
+                <p>
+
+                Computational methods identify genes
+                that differ between samples.
+
+                </p>
+
+                </div>
+
+
+
+                </div>
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                RESEARCH QUESTION
+                ========================= -->
+
+
+                <section class="question-section">
+
+
+
+                <h2 class="reveal">
+
+                Our Research Question
+
+                </h2>
+
+
+
+                <p class="research-question reveal">
+
+                Which genes are expressed differently
+                in colon cancer compared with healthy
+                colon tissue?
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                By measuring gene expression levels,
+                we can compare healthy and diseased
+                samples to identify important genetic
+                changes.
+
+                </p>
+
+
+
+                <div class="transition reveal">
+
+
+                <h1>
+
+                PART 2
+
+                <br>
+
+                ALGORITHM
+
+                </h1>
+
+
+                <p>
+
+                How can we use data analysis to answer
+                our research question?
+
+                </p>
+
+
+                </div>
+
+
+
+                </section>
+
+                <!-- =========================
+                        PART 2 ALGORITHM
+                ========================= -->
+
+
+                <section id="algorithm" class="chapter">
+
+
+                <h1 class="chapter-title reveal">
+
+                PART 2
+
+                <br>
+
+                ALGORITHM
+
+                </h1>
+
+
+                <p class="chapter-subtitle reveal">
+
+                Using computational methods to identify
+                differences in gene expression.
+
+                </p>
+
+
+
+
+
+
+                <!-- =========================
+                DATASET
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Our Dataset
+
+                </h2>
+
+
+                <p class="reveal">
+
+                We analyzed an Affymetrix microarray
+                dataset containing gene expression data
+                from healthy colon tissue and colon
+                cancer samples.
+
+                </p>
+
+
+                <p class="reveal">
+
+                Each sample contains measurements for
+                thousands of genes, allowing us to compare
+                gene activity between healthy and tumor
+                tissue.
+
+                </p>
+
+
+                </section>
+
+
+
+
+
+
+                <!-- =========================
+                COMPUTATIONAL PIPELINE
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Computational Method
+
+                </h2>
+
+
+
+                <div class="pipeline">
+
+
+
+                <div class="pipeline-step reveal">
+
+                Raw Microarray Data
+
+                <p>
+
+                Expression measurements collected from
+                patient samples.
+
+                </p>
+
+                </div>
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+
+                <div class="pipeline-step reveal">
+
+                Data Cleaning
+
+                <p>
+
+                Remove missing or unusable data and
+                prepare the dataset for analysis.
+
+                </p>
+
+                </div>
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="pipeline-step reveal">
+
+                Normalization
+
+                <p>
+
+                Adjust expression values so samples can
+                be accurately compared.
+
+                </p>
+
+                </div>
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="pipeline-step reveal">
+
+                Differential Expression Analysis
+
+                <p>
+
+                Find genes with significant differences
+                between healthy and cancer samples.
+
+                </p>
+
+                </div>
+
+
+
+                </div>
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                LIMMA
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Statistical Analysis: Limma
+
+                </h2>
+
+
+                <p class="reveal">
+
+                Limma is a statistical method designed
+                for analyzing gene expression data.
+
+                </p>
+
+
+                <p class="reveal">
+
+                It uses linear models to compare gene
+                expression levels between groups and
+                determines which genes show significant
+                changes.
+
+                </p>
+
+
+
+                <div class="card-grid">
+
+
+                <div class="card reveal">
+
+                <h3>
+
+                Fold Change
+
+                </h3>
+
+                <p>
+
+                Measures how much gene expression
+                changes between cancer and healthy
+                samples.
+
+                </p>
+
+
+                </div>
+
+
+
+                <div class="card reveal">
+
+
+                <h3>
+
+                p-value
+
+                </h3>
+
+
+                <p>
+
+                Determines whether the observed change
+                is statistically significant.
+
+                </p>
+
+
+                </div>
+
+
+
+                <div class="card reveal">
+
+
+                <h3>
+
+                Adjusted p-value
+
+                </h3>
+
+
+                <p>
+
+                Corrects for testing thousands of genes
+                at the same time.
+
+                </p>
+
+
+                </div>
+
+
+
+                </div>
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                WELCH T TEST
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Welch's t-test
+
+                </h2>
+
+
+                <p class="reveal">
+
+                Welch's t-test is another statistical
+                method used to compare the average
+                expression levels between two groups.
+
+                </p>
+
+
+                <p class="reveal">
+
+                We compared the results from Welch's
+                t-test with Limma to see whether both
+                methods identified similar changes.
+
+                </p>
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                FLOWCHART
+                ========================= -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Analysis Workflow
+
+                </h2>
+
+
+
+                <div class="flowchart">
+
+
+                <div class="pipeline-step reveal">
+
+                Microarray Data
+
+                </div>
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+                <div class="pipeline-step reveal">
+
+                Normalization
+
+                </div>
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+                <div class="pipeline-step reveal">
+
+                Differential Expression Testing
+
+                </div>
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="split-results">
+
+
+                <div class="pipeline-step reveal">
+
+                Limma
+
+                </div>
+
+
+                <div class="pipeline-step reveal">
+
+                Welch's t-test
+
+                </div>
+
+
+                </div>
+
+
+
+                <div class="pipeline-arrow reveal">
+
+                ↓
+
+                </div>
+
+
+
+                <div class="split-results">
+
+
+                <div class="pipeline-step reveal">
+
+                Volcano Plot
+
+                <br>
+
+                Heatmap
+
+                </div>
+
+
+                <div class="pipeline-step reveal">
+
+                Volcano Plot
+
+                <br>
+
+                Heatmap
+
+                </div>
+
+
+                </div>
+
+
+
+                </div>
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                RESULTS
+                ========================= -->
+
+
+                <section id="results" class="chapter">
+
+
+                <h1 class="chapter-title reveal">
+
+                RESULTS
+
+                </h1>
+
+
+                <p class="chapter-subtitle reveal">
+
+                What did our analysis reveal?
+
+                </p>
+
+
+
+
+
+
+
+                <!-- LIMMA RESULTS -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Limma Results
+
+                </h2>
+
+
+
+                <div class="image-card reveal">
+
+
+                <h3>
+
+                Volcano Plot
+
+                </h3>
+
+
+                <img src="images/limma_volcano.png"
+                alt="Limma Volcano Plot">
+
+
+                </div>
+
+
+
+
+                <div class="image-card reveal">
+
+
+                <h3>
+
+                Heatmap
+
+                </h3>
+
+
+                <img src="images/limma_heatmap.png"
+                alt="Limma Heatmap">
+
+
+                </div>
+
+
+
+
+                </section>
+
+
+
+
+
+
+
+
+                <!-- T TEST RESULTS -->
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Welch's t-test Results
+
+                </h2>
+
+
+
+                <div class="image-card reveal">
+
+
+                <h3>
+
+                Volcano Plot
+
+                </h3>
+
+
+                <img src="images/ttest_volcano.png"
+                alt="Welch t-test Volcano Plot">
+
+
+                </div>
+
+
+
+
+
+                <div class="image-card reveal">
+
+
+                <h3>
+
+                Heatmap
+
+                </h3>
+
+
+                <img src="images/ttest_heatmap.png"
+                alt="Welch t-test Heatmap">
+
+
+                </div>
+
+
+
+
+                </section>
+
+
+
+
+
+
+
+
+                <section class="subsection">
+
+
+                <h2 class="reveal">
+
+                Why Do These Results Matter?
+
+                </h2>
+
+
+
+                <p class="reveal">
+
+                The identified genes show differences
+                between healthy and cancer tissue.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                These genes may help researchers discover
+                biomarkers for colon cancer and better
+                understand how tumors develop.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                While gene expression analysis will not
+                replace current cancer screening methods,
+                it can support personalized oncology after
+                diagnosis.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                Microarray analysis can help predict tumor
+                behavior, guide treatment decisions, and
+                uncover pathways that may lead to future
+                cancer therapies.
+
+                </p>
+
+
+
+                </section>
+
+
+
+                </section>
+
+
+
+
+
+
+
+
+                <!-- =========================
+                CONCLUSION
+                ========================= -->
+
+
+                <section id="conclusion" class="chapter conclusion">
+
+
+                <h1 class="chapter-title reveal">
+
+                CONCLUSION
+
+                </h1>
+
+
+                <p class="research-question reveal">
+
+                Gene expression analysis provides a way
+                to understand how colon cancer changes
+                cell behavior.
+
+                </p>
+
+
+
+                <p class="reveal">
+
+                By comparing healthy and cancer tissue,
+                we can identify genes that are expressed
+                differently and gain insight into the
+                biology of the disease.
+
+                </p>
+
+
+
+                <h2 class="reveal">
+
+                Thank You
+
+                </h2>
+
+
+
+                </section>
+
+
+
+
+
+                <script src="script.js"></script>
+
+
+        </body>
+
+</html>

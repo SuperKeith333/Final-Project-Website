@@ -1,15 +1,19 @@
+/* =========================
+   GLOBAL
+========================= */
+
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
 }
 
 
 html {
 
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 
 }
 
@@ -17,36 +21,33 @@ html {
 
 body {
 
-    background: #071522;
+    background:#071522;
 
-    color: white;
+    color:white;
 
     font-family:
     Arial, Helvetica, sans-serif;
 
-    overflow-x: hidden;
+    overflow-x:hidden;
 
 }
 
 
 
-p {
+section {
 
-    font-size: 1.25rem;
+    min-height:auto;
 
-    line-height: 1.7;
-
-    color: #d5dce3;
+    padding:80px 12%;
 
 }
-
 
 
 h1 {
 
-    font-size: 4.5rem;
+    font-size:5rem;
 
-    line-height: 1.1;
+    line-height:1.1;
 
 }
 
@@ -54,9 +55,9 @@ h1 {
 
 h2 {
 
-    font-size: 3rem;
+    font-size:3rem;
 
-    margin-bottom: 40px;
+    margin-bottom:50px;
 
 }
 
@@ -64,67 +65,29 @@ h2 {
 
 h3 {
 
-    font-size: 2rem;
-
-    margin-bottom: 20px;
+    font-size:2rem;
 
 }
 
 
 
-/* ======================
-NAVIGATION
-====================== */
+p {
 
+    font-size:1.3rem;
 
-nav {
+    line-height:1.7;
 
-    position: fixed;
-
-    top:0;
-
-    width:100%;
-
-    height:70px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:35px;
-
-    background:
-
-    rgba(7,21,34,.75);
-
-    backdrop-filter:blur(12px);
-
-    z-index:100;
-
+    color:#d7e1e8;
 
 }
 
 
 
-nav a {
+li {
 
-    color:white;
+    font-size:1.2rem;
 
-    text-decoration:none;
-
-    font-size:18px;
-
-    transition:.3s;
-
-}
-
-
-
-nav a:hover {
-
-    color:#29cc73;
+    margin:15px;
 
 }
 
@@ -132,50 +95,9 @@ nav a:hover {
 
 
 
-/* ======================
-PROGRESS BAR
-====================== */
-
-
-#progress-container {
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    height:6px;
-
-    width:100%;
-
-    background:#1b2b38;
-
-    z-index:200;
-
-
-}
-
-
-
-#progress-bar {
-
-    height:100%;
-
-    width:0%;
-
-    background:#29cc73;
-
-
-}
-
-
-
-
-
-/* ======================
-HOME
-====================== */
+/* =========================
+   HOME HERO
+========================= */
 
 
 .hero {
@@ -192,17 +114,15 @@ HOME
     text-align:center;
 
 
-    background-image:
-
+    background:
 
     linear-gradient(
 
-    rgba(7,21,34,.75),
+    rgba(7,21,34,.65),
 
     rgba(7,21,34,.95)
 
     ),
-
 
     url("images/dna.jpg");
 
@@ -227,7 +147,7 @@ HOME
 
 .hero p {
 
-    font-size:1.5rem;
+    max-width:850px;
 
     margin:40px auto;
 
@@ -235,24 +155,25 @@ HOME
 
 
 
-.button {
+.explore-button {
 
 
-    display:inline-block;
+    padding:20px 50px;
 
-    padding:20px 45px;
+    border-radius:15px;
+
+    border:none;
+
 
     background:#29cc73;
 
     color:white;
 
-    border-radius:15px;
 
-    text-decoration:none;
-
-    font-size:1.4rem;
+    font-size:1.5rem;
 
     cursor:pointer;
+
 
     transition:.3s;
 
@@ -261,59 +182,13 @@ HOME
 
 
 
-.button:hover {
+.explore-button:hover {
+
 
     transform:translateY(-5px);
 
     background:#20a85d;
 
-}
-
-
-
-
-
-
-/* ======================
-CHAPTERS
-====================== */
-
-
-.chapter {
-
-
-    min-height:100vh;
-
-    padding:
-
-    140px 12%;
-
-}
-
-
-
-.chapter-title {
-
-
-    text-align:center;
-
-    margin-bottom:30px;
-
-}
-
-
-
-.chapter-subtitle {
-
-
-    text-align:center;
-
-    max-width:800px;
-
-    margin:
-
-    auto auto 100px auto;
-
 
 }
 
@@ -321,24 +196,24 @@ CHAPTERS
 
 
 
-.subsection {
+
+/* =========================
+   SMALL CHAPTER HERO
+========================= */
 
 
-    min-height:80vh;
-
-    padding:
-
-    80px 0;
+.hero-small {
 
 
-}
+    min-height:70vh;
 
+    display:flex;
 
+    flex-direction:column;
 
+    justify-content:center;
 
-
-.subsection h2 {
-
+    align-items:center;
 
     text-align:center;
 
@@ -348,11 +223,212 @@ CHAPTERS
 
 
 
+/* =========================
+   MENU
+========================= */
 
 
-/* ======================
-REVEAL ANIMATION
-====================== */
+.menu {
+
+
+    position:fixed;
+
+    inset:0;
+
+
+    background:
+
+    rgba(7,21,34,.97);
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    gap:35px;
+
+
+    opacity:0;
+
+    pointer-events:none;
+
+
+    transition:.5s;
+
+
+    z-index:1000;
+
+
+}
+
+
+
+
+.menu.open {
+
+
+    opacity:1;
+
+    pointer-events:auto;
+
+
+}
+
+
+
+.menu h2 {
+
+
+    font-size:4rem;
+
+}
+
+
+
+.menu a {
+
+
+    color:white;
+
+    text-decoration:none;
+
+
+    font-size:2.2rem;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.menu a:hover {
+
+
+    color:#29cc73;
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+.close {
+
+
+    position:absolute;
+
+
+    top:30px;
+
+    right:40px;
+
+
+    background:none;
+
+    border:none;
+
+
+    color:white;
+
+
+    font-size:3rem;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+.floating-menu {
+
+
+    position:fixed;
+
+
+    top:30px;
+
+    left:30px;
+
+
+    z-index:500;
+
+
+    border:none;
+
+    background:#10283b;
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    width:70px;
+
+    height:70px;
+
+
+    font-size:2rem;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   TEXT ALIGNMENT
+========================= */
+
+
+.center {
+
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:auto;
+
+
+}
+
+
+
+.highlight {
+
+
+    color:#29cc73;
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
 
 
 .reveal {
@@ -363,9 +439,9 @@ REVEAL ANIMATION
 
     transform:
 
-    translateY(70px)
+    translateY(60px)
 
-    scale(.92);
+    scale(.95);
 
 
     transition:
@@ -398,9 +474,11 @@ REVEAL ANIMATION
 
 
 
-/* ======================
-STAT BOXES
-====================== */
+
+
+/* =========================
+   STATISTICS
+========================= */
 
 
 .stats {
@@ -408,11 +486,14 @@ STAT BOXES
 
     display:flex;
 
+
     gap:30px;
 
-    margin:
 
-    70px 0;
+    justify-content:center;
+
+
+    margin-top:70px;
 
 
 }
@@ -422,15 +503,19 @@ STAT BOXES
 .stat {
 
 
-    flex:1;
-
     background:#10283b;
+
 
     padding:40px;
 
+
     border-radius:20px;
 
+
     text-align:center;
+
+
+    flex:1;
 
 
 }
@@ -440,9 +525,9 @@ STAT BOXES
 .stat h3 {
 
 
-    color:#29cc73;
+    font-size:4rem;
 
-    font-size:3.5rem;
+    color:#29cc73;
 
 
 }
@@ -452,31 +537,27 @@ STAT BOXES
 
 
 
-
-/* ======================
-CARDS
-====================== */
-
-
-.card-grid {
+/* =========================
+   CARDS
+========================= */
 
 
-    display:grid;
+.cards {
 
-    grid-template-columns:
 
-    repeat(3,1fr);
+    display:flex;
+
+
+    justify-content:center;
 
 
     gap:30px;
 
-    margin:
 
-    60px 0;
+    flex-wrap:wrap;
 
 
 }
-
 
 
 
@@ -485,34 +566,40 @@ CARDS
 
     background:#10283b;
 
+
     padding:35px;
+
 
     border-radius:20px;
 
 
+    width:350px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.card h3 {
+
+
+    margin-bottom:20px;
+
+
 }
 
 
 
 
 
-.highlight {
 
 
-    color:#29cc73;
-
-    font-weight:bold;
-
-}
-
-
-
-
-
-
-/* ======================
-GENE EXPRESSION FLOW
-====================== */
+/* =========================
+   GENE EXPRESSION
+========================= */
 
 
 .gene-flow {
@@ -520,38 +607,45 @@ GENE EXPRESSION FLOW
 
     display:flex;
 
+
     flex-direction:column;
+
 
     align-items:center;
 
+
     gap:25px;
 
-    margin-top:70px;
+
+    margin-top:60px;
 
 
 }
-
 
 
 
 .gene-box {
 
 
+    background:#10283b;
+
+
     width:450px;
 
-    background:#10283b;
 
     padding:35px;
 
+
     border-radius:20px;
+
 
     text-align:center;
 
-    font-size:2rem;
+
+    font-size:2.5rem;
 
 
 }
-
 
 
 
@@ -560,9 +654,12 @@ GENE EXPRESSION FLOW
 
     display:block;
 
-    margin-top:15px;
 
     font-size:1rem;
+
+
+    margin-top:15px;
+
 
     color:#cbd5dc;
 
@@ -587,9 +684,9 @@ GENE EXPRESSION FLOW
 
 
 
-/* ======================
-PIPELINES
-====================== */
+/* =========================
+   MICROARRAY PIPELINE
+========================= */
 
 
 .pipeline {
@@ -597,11 +694,14 @@ PIPELINES
 
     display:flex;
 
+
     flex-direction:column;
+
 
     align-items:center;
 
-    margin-top:60px;
+
+    gap:20px;
 
 
 }
@@ -611,15 +711,20 @@ PIPELINES
 .pipeline-step {
 
 
+    background:#10283b;
+
+
     width:600px;
 
-    background:#10283b;
 
     padding:35px;
 
+
     border-radius:20px;
 
+
     text-align:center;
+
 
     font-size:1.8rem;
 
@@ -628,28 +733,27 @@ PIPELINES
 
 
 
-
-.pipeline-step p {
-
-
-    font-size:1rem;
-
-    margin-top:20px;
-
-
-}
-
-
-
-
 .pipeline-arrow {
 
 
     font-size:3rem;
 
+
     color:#29cc73;
 
-    margin:15px;
+
+}
+
+
+
+
+
+.microarray-title {
+
+
+    margin-top:100px;
+
+    text-align:center;
 
 
 }
@@ -659,94 +763,28 @@ PIPELINES
 
 
 
-/* ======================
-FLOWCHART SPLITS
-====================== */
+
+/* =========================
+   ENDING PAGE
+========================= */
 
 
-.flowchart {
+.ending {
 
 
     display:flex;
 
+
     flex-direction:column;
+
+
+    justify-content:center;
+
 
     align-items:center;
 
 
-}
-
-
-
-.split-results {
-
-
-    display:flex;
-
-    gap:40px;
-
-
-}
-
-
-
-
-
-
-
-/* ======================
-IMAGES
-====================== */
-
-
-.image-card {
-
-
-    background:#10283b;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    margin:60px auto;
-
     text-align:center;
-
-
-}
-
-
-
-.image-card img {
-
-
-    max-width:90%;
-
-    border-radius:15px;
-
-    margin-top:30px;
-
-
-}
-
-
-
-
-
-
-/* ======================
-QUESTION
-====================== */
-
-
-.question-section {
-
-
-    text-align:center;
-
-    padding:
-
-    120px 15%;
 
 
 }
@@ -758,29 +796,11 @@ QUESTION
 
     font-size:2.5rem;
 
+
     color:white;
 
-    margin:50px 0;
 
-
-}
-
-
-
-.transition {
-
-
-    margin-top:150px;
-
-
-}
-
-
-
-.transition h1 {
-
-
-    color:#29cc73;
+    max-width:1000px;
 
 
 }
@@ -790,9 +810,36 @@ QUESTION
 
 
 
-/* ======================
-MOBILE
-====================== */
+/* =========================
+   IMAGES / RESULTS
+========================= */
+
+
+img {
+
+
+    max-width:90%;
+
+
+    display:block;
+
+
+    margin:50px auto;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
 
 
 @media(max-width:900px){
@@ -815,25 +862,9 @@ h2 {
 
 
 
-nav {
-
-    display:none;
-
-}
-
-
-
-.stats,
-
-.card-grid,
-
-.split-results {
-
-
-    display:flex;
+.stats {
 
     flex-direction:column;
-
 
 }
 
@@ -843,9 +874,15 @@ nav {
 
 .pipeline-step {
 
-
     width:90%;
 
+}
+
+
+
+.menu a {
+
+    font-size:1.7rem;
 
 }
 
@@ -853,141 +890,21 @@ nav {
 
 }
 
-.symptoms-title {
-
-    margin-top:80px;
-
-}   
-
-.card-grid {
-
-    justify-items:center;
-
-}
+/* =========================
+   CENTER PAGE TITLES
+========================= */
 
 
-.card-grid .card {
-
-    max-width:400px;
-
-}
-
-.card-grid:has(.card:nth-child(2):last-child) {
-
-    grid-template-columns:repeat(2,400px);
-
-    justify-content:center;
-
-}
-
-.subsection h3.reveal {
+section > h1,
+section > h2 {
 
     text-align:center;
 
 }
 
-.conclusion h2 {
+.section-intro {
 
-
-    text-align:center;
-
-    font-size:5rem;
-
-    margin-top:100px;
-
-    color:#29cc73;
-
-    animation:pulse 3s infinite;
-
-
-}
-
-
-@keyframes pulse {
-
-
-    0% {
-
-        transform:scale(1);
-
-    }
-
-
-    50% {
-
-        transform:scale(1.05);
-
-    }
-
-
-    100% {
-
-        transform:scale(1);
-
-    }
-
-
-}
-
-.conclusion {
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-}
-
-.chapter-title::after {
-
-    content:"";
-
-    display:block;
-
-    width:120px;
-
-    height:5px;
-
-    background:#29cc73;
-
-    margin:40px auto;
-
-    border-radius:10px;
-
-}
-
-.microarray-title {
-
-    margin-top: 100px;
-
-    text-align:center;
-
-}
-
-.center-content {
-
-    text-align:center;
-
-}
-
-
-.center-content ul {
-
-    list-style-position:inside;
-
-    padding:0;
-
-}
-
-.center-text {
-
-    text-align:center;
+    margin-bottom:60px;
+    margin-top:60px;
 
 }
