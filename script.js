@@ -1,34 +1,9 @@
-const sections =
-document.querySelectorAll(".card");
+// ==============================
+// SMOOTH SCROLLING
+// ==============================
 
 
-const observer =
-new IntersectionObserver(entries=>{
-
-
-entries.forEach(entry=>{
-
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-
-});
-
-
-});
-
-
-sections.forEach(section=>{
-
-observer.observe(section);
-
-});
-
-function scrollToSection(id){
+function scrollToSection(id) {
 
     const target =
     document.getElementById(id).offsetTop;
@@ -42,32 +17,59 @@ function scrollToSection(id){
     target - start;
 
 
+    const duration = 1500;
+
+
     let startTime = null;
 
 
-    function animation(currentTime){
 
-        if(startTime === null)
-            startTime=currentTime;
+    function animation(currentTime) {
 
 
-        const progress =
-        Math.min(
-            (currentTime-startTime)/1000,
-            1
-        );
+        if (!startTime)
+            startTime = currentTime;
+
+
+
+        const elapsed =
+        currentTime - startTime;
+
+
+
+        let progress =
+        Math.min(elapsed / duration, 1);
+
+
+
+        // ease-in-out function
+
+        progress =
+        progress < 0.5
+
+        ? 2 * progress * progress
+
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
 
 
         window.scrollTo(
+
             0,
-            start + distance * ease(progress)
+
+            start + distance * progress
+
         );
 
 
-        if(progress < 1)
+
+        if (elapsed < duration)
+
             requestAnimationFrame(animation);
 
+
     }
+
 
 
     requestAnimationFrame(animation);
@@ -76,90 +78,220 @@ function scrollToSection(id){
 
 
 
-function ease(t){
 
-    return t<0.5
-    ? 2*t*t
-    : 1-Math.pow(-2*t+2,2)/2;
+
+
+// ==============================
+// PROGRESS BAR
+// ==============================
+
+
+window.addEventListener(
+
+"scroll",
+
+() => {
+
+
+    const scrollTop =
+    document.documentElement.scrollTop;
+
+
+
+    const height =
+
+    document.documentElement.scrollHeight -
+
+    document.documentElement.clientHeight;
+
+
+
+    const progress =
+
+    (scrollTop / height) * 100;
+
+
+
+    document.getElementById(
+        "progress-bar"
+    ).style.width =
+    progress + "%";
+
 
 }
 
-window.addEventListener(
-"scroll",
-()=>{
-
-
-let scrollTop =
-document.documentElement.scrollTop;
-
-
-let height =
-document.documentElement.scrollHeight -
-document.documentElement.clientHeight;
-
-
-let progress =
-(scrollTop/height)*100;
-
-
-document.getElementById(
-"progress-bar"
-).style.width =
-progress+"%";
-
-
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-
-
-    const elements =
-        document.querySelectorAll(".reveal");
-
-
-    console.log(
-        "Found reveal elements:",
-        elements.length
-    );
-
-
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-
-                entries.forEach(entry => {
-
-
-                    if(entry.isIntersecting){
-
-
-                        entry.target.classList.add("show");
-
-
-                        // optional:
-                        observer.unobserve(entry.target);
-
-
-                    }
-
-
-                });
-
-
-            },
-            {
-                threshold: 0.15
-            }
-        );
+);
 
 
 
-    elements.forEach(element => {
-
-        observer.observe(element);
-
-    });
 
 
-});
+
+
+// ==============================
+// REVEAL ANIMATION
+// ==============================
+
+
+document.addEventListener(
+
+"DOMContentLoaded",
+
+() => {
+
+
+
+const elements =
+
+document.querySelectorAll(".reveal");
+
+
+
+console.log(
+
+"Reveal elements found:",
+
+elements.length
+
+);
+
+
+
+
+
+const observer =
+
+new IntersectionObserver(
+
+
+(entries) => {
+
+
+
+entries.forEach(
+
+(entry) => {
+
+
+
+if(entry.isIntersecting){
+
+
+
+entry.target.classList.add(
+    "show"
+);
+
+
+
+observer.unobserve(
+    entry.target
+);
+
+
+
+}
+
+
+
+}
+
+);
+
+
+
+},
+
+
+
+{
+
+threshold:0.15
+
+}
+
+
+
+);
+
+
+
+
+
+elements.forEach(
+
+(element) => {
+
+
+observer.observe(element);
+
+
+}
+
+);
+
+
+
+}
+
+);
+
+
+
+
+
+
+
+// ==============================
+// STAGGER ANIMATIONS
+// ==============================
+
+
+const groups = [
+
+".stats .reveal",
+
+".card-grid .reveal",
+
+".gene-flow .reveal",
+
+".pipeline .reveal",
+
+".flowchart .reveal"
+
+];
+
+
+
+groups.forEach(
+
+(selector) => {
+
+
+
+const items =
+
+document.querySelectorAll(selector);
+
+
+
+items.forEach(
+
+(item,index)=>{
+
+
+item.style.transitionDelay =
+
+`${index * 0.15}s`;
+
+
+
+}
+
+);
+
+
+
+}
+
+);

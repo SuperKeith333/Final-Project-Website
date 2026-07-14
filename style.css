@@ -1,143 +1,130 @@
-*{
+* {
 
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-font-family:
-Arial, Helvetica, sans-serif;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
 
 }
 
 
 
-html{
+body {
 
-scroll-behavior:smooth;
+    background: #071522;
 
-}
+    color: white;
 
+    font-family:
+    Arial, Helvetica, sans-serif;
 
-
-body{
-
-background:#071522;
-
-color:white;
+    overflow-x: hidden;
 
 }
 
 
 
+p {
 
-nav{
+    font-size: 1.25rem;
 
-position:fixed;
+    line-height: 1.7;
 
-top:0;
-
-width:100%;
-
-padding:20px;
-
-display:flex;
-
-justify-content:center;
-
-gap:40px;
-
-background:
-rgba(7,21,34,.8);
-
-backdrop-filter:blur(10px);
-
-z-index:10;
+    color: #d5dce3;
 
 }
 
 
 
-nav a{
+h1 {
 
-color:white;
+    font-size: 4.5rem;
 
-text-decoration:none;
-
-font-size:18px;
+    line-height: 1.1;
 
 }
 
 
 
+h2 {
 
-.hero{
+    font-size: 3rem;
 
+    margin-bottom: 40px;
 
-height:100vh;
-
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
+}
 
 
-background:
 
-linear-gradient(
-rgba(0,0,0,.6),
-rgba(0,0,0,.8)
-),
+h3 {
 
-url("images/dna.jpg");
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+}
 
 
-background-size:cover;
+
+/* ======================
+NAVIGATION
+====================== */
+
+
+nav {
+
+    position: fixed;
+
+    top:0;
+
+    width:100%;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    background:
+
+    rgba(7,21,34,.75);
+
+    backdrop-filter:blur(12px);
+
+    z-index:100;
 
 
 }
 
 
 
+nav a {
 
-h1{
+    color:white;
 
-font-size:70px;
+    text-decoration:none;
 
-margin-bottom:30px;
+    font-size:18px;
 
-}
-
-
-
-.hero p{
-
-font-size:25px;
-
-color:#ddd;
-
-margin-bottom:40px;
+    transition:.3s;
 
 }
 
 
 
-.button{
+nav a:hover {
 
-background:#29cc73;
-
-padding:20px 40px;
-
-border-radius:15px;
-
-color:white;
-
-text-decoration:none;
-
-font-size:24px;
+    color:#29cc73;
 
 }
 
@@ -145,237 +132,862 @@ font-size:24px;
 
 
 
-.section{
+/* ======================
+PROGRESS BAR
+====================== */
 
 
-min-height:100vh;
+#progress-container {
 
-padding:120px 15%;
+    position:fixed;
 
+    top:0;
 
-}
+    left:0;
 
+    height:6px;
 
+    width:100%;
 
-.section>h1{
+    background:#1b2b38;
 
-text-align:center;
-
-margin-bottom:60px;
-
-}
-
-
-
-
-.card{
-
-
-background:#10283b;
-
-padding:40px;
-
-margin:40px 0;
-
-border-radius:20px;
-
-
-opacity:0;
-
-transform:translateY(50px);
-
-
-transition:1s;
+    z-index:200;
 
 
 }
 
 
 
-.card.show{
+#progress-bar {
 
-opacity:1;
+    height:100%;
 
-transform:none;
+    width:0%;
 
-}
-
-
-
-
-.pipeline{
-
-
-font-size:30px;
-
-text-align:center;
-
-line-height:2;
+    background:#29cc73;
 
 
 }
 
 
 
-.pipeline div{
 
 
-background:#10283b;
+/* ======================
+HOME
+====================== */
 
-padding:25px;
 
-border-radius:20px;
+.hero {
 
-margin:20px;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+
+    background-image:
+
+
+    linear-gradient(
+
+    rgba(7,21,34,.75),
+
+    rgba(7,21,34,.95)
+
+    ),
+
+
+    url("images/dna.jpg");
+
+
+
+    background-size:cover;
+
+    background-position:center;
 
 
 }
 
 
 
-.image-card{
+.hero-content {
 
-
-background:#10283b;
-
-padding:30px;
-
-border-radius:20px;
-
-margin:50px auto;
-
-text-align:center;
+    max-width:1000px;
 
 }
 
 
 
-.image-card img{
+.hero p {
 
+    font-size:1.5rem;
 
-max-width:80%;
-
-
-}
-
-#progress-container{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:6px;
-
-background:#1a2733;
-
-z-index:100;
+    margin:40px auto;
 
 }
 
 
-#progress-bar{
 
-height:100%;
+.button {
 
-width:0%;
 
-background:#29cc73;
+    display:inline-block;
 
-transition:.1s;
+    padding:20px 45px;
+
+    background:#29cc73;
+
+    color:white;
+
+    border-radius:15px;
+
+    text-decoration:none;
+
+    font-size:1.4rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 
 }
+
+
+
+.button:hover {
+
+    transform:translateY(-5px);
+
+    background:#20a85d;
+
+}
+
+
+
+
+
+
+/* ======================
+CHAPTERS
+====================== */
+
+
+.chapter {
+
+
+    min-height:100vh;
+
+    padding:
+
+    140px 12%;
+
+}
+
+
+
+.chapter-title {
+
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.chapter-subtitle {
+
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:
+
+    auto auto 100px auto;
+
+
+}
+
+
+
+
+
+.subsection {
+
+
+    min-height:80vh;
+
+    padding:
+
+    80px 0;
+
+
+}
+
+
+
+
+
+.subsection h2 {
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+/* ======================
+REVEAL ANIMATION
+====================== */
+
 
 .reveal {
 
-    opacity: 0;
+
+    opacity:0;
+
 
     transform:
-        translateY(80px)
-        scale(0.9);
+
+    translateY(70px)
+
+    scale(.92);
+
 
     transition:
-        opacity 0.8s ease,
-        transform 0.8s cubic-bezier(.17,.67,.35,1.2);
+
+    opacity 1s ease,
+
+    transform 1s cubic-bezier(.17,.67,.35,1.2);
+
 
 }
+
 
 
 .reveal.show {
 
-    opacity: 1;
+
+    opacity:1;
+
 
     transform:
-        translateY(0)
-        scale(1);
 
-}
+    translateY(0)
 
-.card:nth-child(2){
-    transition-delay:.15s;
-}
+    scale(1);
 
-
-.card:nth-child(3){
-    transition-delay:.3s;
-}
-
-
-.card:nth-child(4){
-    transition-delay:.45s;
-}
-
-.chapter{
-
-min-height:100vh;
-
-padding:120px 15%;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
 
 }
 
 
 
-.stats{
 
-display:flex;
 
-gap:40px;
+/* ======================
+STAT BOXES
+====================== */
 
-margin-top:80px;
+
+.stats {
+
+
+    display:flex;
+
+    gap:30px;
+
+    margin:
+
+    70px 0;
+
 
 }
 
 
 
-.stat{
+.stat {
 
-background:#10283b;
 
-padding:40px;
+    flex:1;
 
-border-radius:20px;
+    background:#10283b;
 
-text-align:center;
+    padding:40px;
 
-flex:1;
+    border-radius:20px;
+
+    text-align:center;
+
 
 }
 
 
 
-.stat h2{
+.stat h3 {
 
-font-size:60px;
 
-color:#29cc73;
+    color:#29cc73;
+
+    font-size:3.5rem;
+
+
+}
+
+
+
+
+
+
+
+/* ======================
+CARDS
+====================== */
+
+
+.card-grid {
+
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+    margin:
+
+    60px 0;
+
+
+}
+
+
+
+
+.card {
+
+
+    background:#10283b;
+
+    padding:35px;
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+.highlight {
+
+
+    color:#29cc73;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+
+/* ======================
+GENE EXPRESSION FLOW
+====================== */
+
+
+.gene-flow {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:70px;
+
+
+}
+
+
+
+
+.gene-box {
+
+
+    width:450px;
+
+    background:#10283b;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    font-size:2rem;
+
+
+}
+
+
+
+
+.gene-box span {
+
+
+    display:block;
+
+    margin-top:15px;
+
+    font-size:1rem;
+
+    color:#cbd5dc;
+
+
+}
+
+
+
+.arrow {
+
+
+    font-size:3rem;
+
+    color:#29cc73;
+
+
+}
+
+
+
+
+
+
+
+/* ======================
+PIPELINES
+====================== */
+
+
+.pipeline {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-top:60px;
+
+
+}
+
+
+
+.pipeline-step {
+
+
+    width:600px;
+
+    background:#10283b;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    font-size:1.8rem;
+
+
+}
+
+
+
+
+.pipeline-step p {
+
+
+    font-size:1rem;
+
+    margin-top:20px;
+
+
+}
+
+
+
+
+.pipeline-arrow {
+
+
+    font-size:3rem;
+
+    color:#29cc73;
+
+    margin:15px;
+
+
+}
+
+
+
+
+
+
+/* ======================
+FLOWCHART SPLITS
+====================== */
+
+
+.flowchart {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+
+}
+
+
+
+.split-results {
+
+
+    display:flex;
+
+    gap:40px;
+
+
+}
+
+
+
+
+
+
+
+/* ======================
+IMAGES
+====================== */
+
+
+.image-card {
+
+
+    background:#10283b;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    margin:60px auto;
+
+    text-align:center;
+
+
+}
+
+
+
+.image-card img {
+
+
+    max-width:90%;
+
+    border-radius:15px;
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+
+
+/* ======================
+QUESTION
+====================== */
+
+
+.question-section {
+
+
+    text-align:center;
+
+    padding:
+
+    120px 15%;
+
+
+}
+
+
+
+.research-question {
+
+
+    font-size:2.5rem;
+
+    color:white;
+
+    margin:50px 0;
+
+
+}
+
+
+
+.transition {
+
+
+    margin-top:150px;
+
+
+}
+
+
+
+.transition h1 {
+
+
+    color:#29cc73;
+
+
+}
+
+
+
+
+
+
+/* ======================
+MOBILE
+====================== */
+
+
+@media(max-width:900px){
+
+
+
+h1 {
+
+    font-size:3rem;
+
+}
+
+
+
+h2 {
+
+    font-size:2rem;
+
+}
+
+
+
+nav {
+
+    display:none;
+
+}
+
+
+
+.stats,
+
+.card-grid,
+
+.split-results {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+}
+
+
+
+.gene-box,
+
+.pipeline-step {
+
+
+    width:90%;
+
+
+}
+
+
+
+}
+
+.symptoms-title {
+
+    margin-top:80px;
+
+}   
+
+.card-grid {
+
+    justify-items:center;
+
+}
+
+
+.card-grid .card {
+
+    max-width:400px;
+
+}
+
+.card-grid:has(.card:nth-child(2):last-child) {
+
+    grid-template-columns:repeat(2,400px);
+
+    justify-content:center;
+
+}
+
+.subsection h3.reveal {
+
+    text-align:center;
+
+}
+
+.conclusion h2 {
+
+
+    text-align:center;
+
+    font-size:5rem;
+
+    margin-top:100px;
+
+    color:#29cc73;
+
+    animation:pulse 3s infinite;
+
+
+}
+
+
+@keyframes pulse {
+
+
+    0% {
+
+        transform:scale(1);
+
+    }
+
+
+    50% {
+
+        transform:scale(1.05);
+
+    }
+
+
+    100% {
+
+        transform:scale(1);
+
+    }
+
+
+}
+
+.conclusion {
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.chapter-title::after {
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:5px;
+
+    background:#29cc73;
+
+    margin:40px auto;
+
+    border-radius:10px;
+
+}
+
+.microarray-title {
+
+    margin-top: 100px;
+
+    text-align:center;
+
+}
+
+.center-content {
+
+    text-align:center;
+
+}
+
+
+.center-content ul {
+
+    list-style-position:inside;
+
+    padding:0;
+
+}
+
+.center-text {
+
+    text-align:center;
 
 }
