@@ -15,7 +15,7 @@ Research - Gene Expression and Colon Cancer
 </head>
 
 
-<body>
+<body class="research-page">
 
 
 <!-- MENU -->
@@ -51,11 +51,6 @@ Algorithm
 
 <a href="results.html">
 Results
-</a>
-
-
-<a href="conclusion.html">
-Conclusion
 </a>
 
 <a href="citations.html">
@@ -213,7 +208,7 @@ RISK FACTORS
 
          <div class="diagram-wrapper">
                 <img 
-                src="images/colon1.jpg"
+                src="images/colon.png"
                 class="colon-image"
                 alt="Human body with highlighted colon"
             >
@@ -269,12 +264,9 @@ RISK FACTORS
 
 </section>
 
-
-<br>
-
 <div class="detection-card">
 
-<h3 class="highlight">
+<h3 class="highlight">  
 
 Many people show no symptoms during
 early stages, making detection difficult.
@@ -291,80 +283,37 @@ early stages, making detection difficult.
 
 
 
-
 <!-- =====================
-EARLY DETECTION
+MUTATIONS TO TUMOR DEVELOPMENT
 ===================== -->
 
+<section class="tumor-development-section">
 
-<section>
+    <h2 class="reveal">From Mutations to Tumor Development</h2>
 
+    <p class="center reveal">
+        Colon cancer develops when genetic and epigenetic changes disrupt the systems that normally control cell division, DNA repair, and programmed cell death. These changes can alter gene expression, causing some genes to produce too much mRNA and others too little. The resulting protein changes can allow damaged cells to survive, divide, and form tumors.
+    </p>
 
-<h2 class="reveal">
-
-Early Diagnosis Matters
-
-</h2>
-
-
-
-<p class="reveal center section-intro">
-
-Treatments are much more effective when
-colon cancer is detected early.
-
-</p>
-
-<div class="cards">
-
-
-
-<div class="treatment-flow">
-
-    <div class="treatment-card">
-        <h3 class="highlight">Screening</h3>
-        <p>
-            Regular screening can detect cancer
-            before symptoms appear.
-        </p>
+    <div class="tumor-transition-flow reveal" aria-label="Colon cancer progression flow">
+        <div class="tumor-flow-step">DNA mutations or epigenetic changes</div>
+        <div class="tumor-flow-arrow">→</div>
+        <div class="tumor-flow-step">Altered gene regulation</div>
+        <div class="tumor-flow-arrow">→</div>
+        <div class="tumor-flow-step">Too much or too little mRNA</div>
+        <div class="tumor-flow-arrow">→</div>
+        <div class="tumor-flow-step">Altered protein levels</div>
+        <div class="tumor-flow-arrow">→</div>
+        <div class="tumor-flow-step">Changes in cell growth and survival</div>
+        <div class="tumor-flow-arrow">→</div>
+        <div class="tumor-flow-step">Tumor development</div>
     </div>
 
-    <div class="flow-arrow">
-        →
-    </div>
-
-    <div class="treatment-card">
-        <h3 class="highlight">Surgery</h3>
-        <p>
-            Often used when tumors are detected
-            at earlier stages.
-        </p>
-    </div>
-
-    <div class="flow-arrow">
-        →
-    </div>
-
-    <div class="treatment-card">
-        <h3 class="highlight">Other Treatments</h3>
-        <p>
-            Includes chemotherapy, radiation,
-            targeted therapy, and immunotherapy.
-        </p>
-    </div>
-
-</div>
-
-
-
-</div>
-
-
+    <p class="tumor-note reveal">
+        Gene-expression analysis identifies changes associated with tumor tissue, but it does not by itself prove causation. It helps study tumor biology and identify potential biomarkers or pathways.
+    </p>
 
 </section>
-
-
-
 
 
 
@@ -406,21 +355,21 @@ genes to perform specialized functions.
     <div class="biology-card">
         <h3>DNA</h3>
         <p>Genetic instructions</p>
-        <img src="images/dna.png" alt="DNA">
+        <img src="images/dna2.png" alt="DNA" class="dna2">
     </div>
 
     <div class="biology-arrow">
-        ↓
+        →
     </div>
 
     <div class="biology-card">
         <h3>mRNA</h3>
         <p>Copied instructions</p>
-        <img src="images/mrna.png" alt="mRNA">
+        <img src="images/rna.png" alt="mRNA">
     </div>
 
     <div class="biology-arrow">
-        ↓
+        →
     </div>
 
     <div class="biology-card">
@@ -430,13 +379,13 @@ genes to perform specialized functions.
     </div>
 
     <div class="biology-arrow">
-        ↓
+        →
     </div>
 
     <div class="biology-card">
         <h3>Cell Behavior</h3>
         <p>Growth, repair, and function</p>
-        <img src="images/cell.png" alt="Cells">
+        <img src="images/cell function.png" alt="Cells">
     </div>
 
 </div>
@@ -488,9 +437,10 @@ What Does It Mean For A Gene To Be
     </div>
 
     <img
-        src="images/gene-expression-comparison.png"
+        id="geneExpressionImage"
+        src=""
         class="expression-diagram"
-        alt="Comparison of gene turned on versus gene turned off">
+        alt="Gene expression diagram">
 
 </div>
 
@@ -525,101 +475,39 @@ MICROARRAY
 ===================== -->
 
 
-<section>
+<section class="microarray-measure-section">
 
+    <h2 class="reveal">How Do We Measure Gene Expression?</h2>
 
-<h2 class="reveal">
+    <p class="center reveal">
+        A DNA microarray measures expression levels for thousands of known genes in one experiment. Labeled material from a sample binds to matching DNA probes, and the resulting signal estimates how much RNA was present.
+    </p>
 
-How Can We Measure Gene Expression?
+    <div class="microarray-section">
+        <div class="microarray-timeline reveal" role="tablist" aria-label="Microarray assay steps">
+            <button type="button" class="microarray-step active" data-step="samples" aria-selected="true" aria-controls="micro-step-text">Collect samples</button>
+            <button type="button" class="microarray-step" data-step="rna" aria-selected="false" aria-controls="micro-step-text">Extract RNA</button>
+            <button type="button" class="microarray-step" data-step="prep" aria-selected="false" aria-controls="micro-step-text">Convert the RNA into cDNA</button>
+            <button type="button" class="microarray-step" data-step="hybridize" aria-selected="false" aria-controls="micro-step-text">Add labels</button>
+            <button type="button" class="microarray-step" data-step="scan" aria-selected="false" aria-controls="micro-step-text">Hybridize to DNA probes</button>
+            <button type="button" class="microarray-step" data-step="analysis" aria-selected="false" aria-controls="micro-step-text">Scan and Analyze data</button>
+        </div>
 
-</h2>
-
-
-
-<p class="center reveal">
-
-DNA microarrays measure the expression
-levels of thousands of genes at the same
-time.
-
-</p>
-
-
-
-
-
-<h3 class="reveal microarray-title section-intro">
-
-How Does A DNA Microarray Work?
-
-</h3>
-
-
-<div class="workflow">
-
-    <div class="workflow-card" onclick="openInfo('samples')">
-        <h3>Collect<br>Samples</h3>
-        <img src="images/sample.png">
+        <div class="microarray-detail reveal">
+            <h3 id="micro-step-title">Collect biological samples</h3>
+            <p id="micro-step-text">Scientists collect the biological samples they want to compare, such as healthy colon tissue and colon tumor tissue. Each sample represents one condition, so the later analysis can compare gene activity between groups.</p>
+            <img
+                id="micro-step-image"
+                class="microarray-step-image"
+                src="images/1.png"
+                alt="Illustration of collecting biological samples"
+            >
+        </div>
     </div>
 
-    <div class="workflow-arrow">↓</div>
-
-
-    <div class="workflow-card" onclick="openInfo('rna')">
-        <h3>Extract<br>RNA</h3>
-        <img src="images/rna.png">
+    <div class="microarray-summary reveal">
+        <p>By comparing healthy and tumor expression values, researchers can identify genes expressed at higher or lower levels in cancer. These changes can point to possible biomarkers, relevant pathways, and future therapeutic research.</p>
     </div>
-
-    <div class="workflow-arrow">↓</div>
-
-
-    <div class="workflow-card" onclick="openInfo('cdna')">
-        <h3>Convert RNA<br>into cDNA</h3>
-        <img src="images/cdna.png">
-    </div>
-
-    <div class="workflow-arrow">↓</div>
-
-
-    <div class="workflow-card" onclick="openInfo('labels')">
-        <h3>Add<br>Labels</h3>
-        <img src="images/label.png">
-    </div>
-
-    <div class="workflow-arrow">↓</div>
-
-
-    <div class="workflow-card" onclick="openInfo('chip')">
-        <h3>Bind cDNA to<br>Microarray Chip</h3>
-        <img src="images/chip.png">
-    </div>
-
-    <div class="workflow-arrow">↓</div>
-
-
-    <div class="workflow-card" onclick="openInfo('analysis')">
-        <h3>Analyze<br>Expression Data</h3>
-        <img src="images/data.png">
-    </div>
-
-</div>
-
-
-<div class="info-overlay" id="infoOverlay">
-
-    <div class="info-box">
-
-        <button onclick="closeInfo()">×</button>
-
-        <h2 id="infoTitle"></h2>
-
-        <p id="infoText"></p>
-
-    </div>
-
-</div>
-
-
 
 </section>
 
@@ -633,38 +521,6 @@ How Does A DNA Microarray Work?
 QUESTION
 ===================== -->
 
-
-<section class="ending">
-
-// NOTE MOVE TO ANOTHER SECTION
-
-<h2 class="reveal">
-
-Our Research Question
-
-</h2>
-
-
-<p class="research-question reveal">
-
-Which genes are expressed differently
-in colon cancer compared with healthy
-colon tissue?
-
-</p>
-
-
-
-<p class="center reveal">
-
-By comparing gene expression patterns,
-we can identify important biological
-changes associated with cancer.
-
-</p>
-
-
-</section>
 
 <div class="page-navigation">
     <a href="algorithm.html" class="next-button">
@@ -710,8 +566,8 @@ window.addEventListener("scroll", () => {
     document.querySelector(".diagram-wrapper");
 
 
-    const imageOffset = progress * 250;
-const imageScale = 1 + (progress * 0.6);
+    const imageOffset = progress * 400;
+const imageScale = 1 + (progress * 1.2);
 
 diagram.style.transform =
     `translateX(${imageOffset}px) scale(${imageScale})`;

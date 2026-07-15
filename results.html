@@ -2,678 +2,160 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-Results - Gene Expression Analysis
-</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Gene Expression Analysis</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
-<body>
-
-
-
-<!-- MENU -->
+<body class="results-page">
 
 <div id="menu" class="menu">
-
-
-<button id="closeMenu" class="close">
-✕
-</button>
-
-
-<h2>
-Explore
-</h2>
-
-
-<a href="index.html">
-Home
-</a>
-
-
-<a href="research.html">
-Research
-</a>
-
-
-<a href="algorithm.html">
-Algorithm
-</a>
-
-
-<a href="results.html">
-Results
-</a>
-
-
-<a href="conclusion.html">
-Conclusion
-</a>
-
-
+    <button id="closeMenu" class="close">✕</button>
+    <h2>Explore</h2>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="algorithm.html">Algorithm</a>
+    <a href="results.html">Results</at>
+    <a href="citations.html">Citations</a>
 </div>
 
-
-
-<button id="menuButton" class="floating-menu">
-
-☰
-
-</button>
-
-
-
-
-
-
-
-<!-- =====================
-HEADER
-===================== -->
-
-
-<section class="hero-small">
-
-
-<h1 class="reveal">
-
-PART 3
-
-<br>
-
-RESULTS
-
-</h1>
-
-
-<p class="reveal center section-intro">
-
-Finding genes that change between
-healthy and colon cancer tissue.
-
-</p>
-
-
-<h2 class="reveal secti">
-
-What Did We Find?
-
-</h2>
-
-
-
-<p class="center reveal">
-
-Our analysis identified genes with
-significantly different expression levels
-between healthy and cancer samples.
-
-</p>
-
-
-
-<p class="center reveal section-intro">
-
-Genes with increased activity may be
-involved in cancer development, while
-genes with decreased activity may reveal
-changes in normal cell functions.
-
-</p>
-
-
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Increased Expression
-
-</h3>
-
-
-<p>
-
-Genes that are more active in cancer
-samples compared with healthy tissue.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Decreased Expression
-
-</h3>
-
-
-<p>
-
-Genes that are less active in cancer
-samples.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Significant Genes
-
-</h3>
-
-
-<p>
-
-Genes with large expression changes
-and strong statistical evidence.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
+<button id="menuButton" class="floating-menu">☰</button>
+
+<!-- PART HEADER -->
+<section class="chapter hero-small">
+    <h1 class="reveal">PART 3<br>RESULTS</h1>
+    <p class="reveal">What we found when we compared gene activity in healthy and colon cancer tissue.</p>
 </section>
 
-
-
-
-
-
-
-
-
-<!-- =====================
-VOLCANO PLOT EXPLANATION
-===================== -->
-// ALL GRAPHS W/ TINY EXPLINATION, FULL EXPLINATION LATER
-
+<!-- RESULT OVERVIEW -->
 <section>
+    <p class="results-kicker reveal">Section 3: What We Found</p>
+    <h2 class="reveal">The Expression Patterns Were Different</h2>
+    <p class="center reveal results-intro">
+        Our analysis found many genes with statistically significant expression differences between healthy colon samples and colon tumor samples. Some genes were more active in cancer, while others were less active.
+    </p>
 
-
-<h2 class="reveal">
-
-Understanding Volcano Plots
-
-</h2>
-
-
-
-
-<p class="center reveal">
-
-Volcano plots show the relationship
-between the amount of gene expression
-change and statistical significance.
-
-</p>
-
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Log₂ Fold Change
-
-</h3>
-
-
-<p>
-
-Shows how much a gene's expression
-increased or decreased.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-p-value
-
-</h3>
-
-
-<p>
-
-Shows how likely the observed difference
-is due to chance.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Important Genes
-
-</h3>
-
-
-<p>
-
-Genes far from the center represent the
-largest and most significant changes.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
+    <div class="results-summary-grid">
+        <article class="result-summary-card reveal">
+            <span class="result-symbol">↑</span>
+            <h3>Higher in Cancer</h3>
+            <p>Positive log₂ fold changes indicate genes with greater average expression in tumor samples.</p>
+        </article>
+        <article class="result-summary-card reveal">
+            <span class="result-symbol">↓</span>
+            <h3>Higher in Healthy Tissue</h3>
+            <p>Negative log₂ fold changes indicate genes whose expression was lower in cancer samples.</p>
+        </article>
+        <article class="result-summary-card reveal">
+            <span class="result-symbol">✱</span>
+            <h3>Statistically Significant</h3>
+            <p>Adjusted p-values help identify changes that remain meaningful after thousands of genes are tested.</p>
+        </article>
+    </div>
 </section>
 
-
-
-
-
-
-
-
-
-<!-- =====================
-LIMMA RESULTS
-===================== -->
-
-
+<!-- GRAPHS -->
 <section>
+    <h2 class="reveal">The Results in the Data</h2>
+    <p class="center reveal results-intro">The volcano plot summarizes all tested genes, the heatmap focuses on genes with some of the largest differences, and the PCoA compares overall expression patterns across samples.</p>
 
+    <figure class="result-figure reveal">
+        <img src="images/Limma%20volcano_plot.png" alt="Limma volcano plot comparing gene expression in healthy and colon cancer samples">
+        <figcaption>
+            <h3>Volcano Plot</h3>
+            <p>Red points are significantly higher in cancer and blue points are significantly higher in healthy tissue. Points farther from the center have larger expression changes, and points higher on the graph have stronger statistical evidence.</p>
+        </figcaption>
+    </figure>
 
-<h2 class="reveal">
+    <div class="heatmap-comparison">
+        <figure class="result-figure reveal">
+            <img src="images/Limma%20expression_heatmap.png" alt="Limma heatmap of the top 50 genes with different activity in healthy and colon cancer samples">
+            <figcaption>
+                <h3>Limma Expression Heatmap</h3>
+                <p>Each column represents one tissue sample and each row represents one of the 50 selected genes. Red indicates higher activity and blue indicates lower activity.</p>
+            </figcaption>
+        </figure>
 
-Limma Results
+        <figure class="result-figure reveal">
+            <img src="images/expression_heatmap_of_top_50_genes.png" alt="Welch's t-test heatmap of the top 50 genes in healthy and colon cancer samples">
+            <figcaption>
+                <h3>Welch's T-test Heatmap</h3>
+                <p>This heatmap compares the average activity of the top 50 genes selected using Welch's t-test and labels each gene individually.</p>
+            </figcaption>
+        </figure>
+    </div>
 
-</h2>
-
-
-
-
-<p class="center reveal">
-
-Limma identified genes that showed
-significant differences between healthy
-and cancer samples.
-
-</p>
-
-
-
-<img 
-class="reveal"
-src="images/limma_volcano.png"
-alt="Limma Volcano Plot"
->
-
-
-
-<p class="center reveal">
-
-Volcano plot showing statistically
-significant genes identified by Limma.
-
-</p>
-
-
-
-
-<img
-class="reveal"
-src="images/limma_heatmap.png"
-alt="Limma Heatmap"
->
-
-
-
-<p class="center reveal">
-
-Heatmap showing patterns of gene
-expression across samples.
-
-</p>
-
-
-
+    <figure class="result-figure reveal">
+        <img src="images/PCoA_plot.png" alt="PCoA plot showing healthy and colon cancer samples grouped by gene-expression patterns">
+        <figcaption>
+            <h3>Principal Coordinates Analysis (PCoA)</h3>
+            <p>Each point represents one tissue sample. Healthy samples cluster together on the left, while most cancer samples group separately on the right. This separation shows that the two groups have different overall gene-expression profiles.</p>
+        </figcaption>
+    </figure>
 </section>
 
-
-
-
-
-
-
-
-
-<!-- =====================
-WELCH RESULTS
-===================== -->
-
-
+<!-- SPECIFIC GENES -->
 <section>
+    <h2 class="reveal">Specific Genes from the Gene-Level Comparison</h2>
+    <p class="center reveal results-intro">These examples connect individual expression changes to known biological functions. They are research findings, not stand-alone diagnostic markers.</p>
 
-
-<h2 class="reveal">
-
-Welch's t-test Results
-
-</h2>
-
-
-
-<p class="center reveal">
-
-Welch's t-test provided another approach
-for identifying genes that differ between
-healthy and cancer tissue.
-
-</p>
-
-
-
-
-<img
-class="reveal"
-src="images/ttest_volcano.png"
-alt="Welch Volcano Plot"
->
-
-
-
-<p class="center reveal">
-
-Genes with large fold changes and low
-p-values represent potential biological
-differences.
-
-</p>
-
-
-
-
-<img
-class="reveal"
-src="images/ttest_heatmap.png"
-alt="Welch Heatmap"
->
-
-
-
+    <div class="gene-result-grid">
+        <article class="gene-result-card reveal">
+            <div class="gene-direction up">Higher in cancer</div>
+            <h3>MYC</h3>
+            <p>MYC encodes a transcription factor that helps control the activity of other genes and is closely connected to cell growth and division.</p>
+        </article>
+        <article class="gene-result-card reveal">
+            <div class="gene-direction up">Higher in cancer</div>
+            <h3>CLDN1</h3>
+            <p>CLDN1 produces claudin-1, a component of tight junctions that helps form barriers between neighboring epithelial cells.</p>
+        </article>
+        <article class="gene-result-card reveal">
+            <div class="gene-direction down">Lower in cancer</div>
+            <h3>AQP8</h3>
+            <p>AQP8 encodes a membrane channel involved in transporting water and other small molecules across cell membranes.</p>
+        </article>
+        <article class="gene-result-card reveal">
+            <div class="gene-direction down">Lower in cancer</div>
+            <h3>GUCA2B</h3>
+            <p>GUCA2B encodes uroguanylin, a signaling molecule that activates guanylate cyclase and contributes to normal intestinal signaling.</p>
+        </article>
+    </div>
 </section>
 
-
-
-
-
-
-
-
-
-<!-- =====================
-BIOLOGICAL MEANING
-===================== -->
-
-
+<!-- REAL-WORLD SIGNIFICANCE -->
 <section>
+    <h2 class="reveal">Why Do These Results Matter?</h2>
+    <p class="center reveal results-intro">
+        This analysis is not a replacement for current colon cancer screening or diagnostic methods. Its greatest potential comes after a patient has already been diagnosed.
+    </p>
 
+    <div class="application-grid">
+        <article class="application-card reveal">
+            <h3>Personalized Oncology</h3>
+            <p>A tumor's expression profile can add information about its biology and possible growth behavior. Doctors may combine this information with established clinical evidence when discussing treatment options.</p>
+        </article>
+        <article class="application-card reveal">
+            <h3>Treatment Research</h3>
+            <p>Expression patterns may help researchers study why tumors respond differently to chemotherapy and investigate which treatments are most promising for particular tumor profiles.</p>
+        </article>
+        <article class="application-card reveal">
+            <h3>Future Drug Discovery</h3>
+            <p>Differentially expressed genes can uncover disrupted genetic pathways, giving researchers new biological targets to investigate when developing future cancer drugs.</p>
+        </article>
+    </div>
 
-<h2 class="reveal">
+    <div class="results-caution reveal">
+        <strong>Important limitation:</strong> Gene-expression results show associations with cancer tissue. They do not prove that an individual gene caused the cancer or guarantee that a particular treatment will work.
+    </div>
 
-Why Do These Results Matter?
-
-</h2>
-
-
-
-
-<p class="center reveal">
-
-Changes in gene expression can reveal
-which biological processes are disrupted
-during cancer development.
-
-</p>
-
-
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Cancer Pathways
-
-</h3>
-
-
-<p>
-
-Differentially expressed genes can reveal
-pathways involved in tumor growth and
-cell regulation.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Biomarkers
-
-</h3>
-
-
-<p>
-
-Some genes may become useful markers
-for detecting or studying cancer.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Future Treatments
-
-</h3>
-
-
-<p>
-
-Gene expression patterns may help
-identify possible targets for new drugs.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
+    <!-- <div class="page-navigation">
+        <a href="conclusion.html" class="next-button">Continue to Conclusion →</a>
+    </div> -->
 </section>
-
-
-
-
-
-
-
-
-<!-- =====================
-REAL WORLD USE
-===================== -->
-
-
-<section>
-
-
-<h2 class="reveal">
-
-Real-World Applications
-
-</h2>
-
-
-
-<p class="center reveal">
-
-Gene expression analysis is not meant to
-replace current cancer screening methods.
-
-</p>
-
-
-
-
-<p class="center reveal">
-
-Instead, after diagnosis, it can help
-doctors better understand tumors,
-predict behavior, and select treatment
-options.
-
-</p>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Personalized Oncology
-
-</h3>
-
-
-<p>
-
-Microarray analysis can help identify
-tumor characteristics and support
-personalized treatment decisions.
-
-</p>
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- =====================
-END
-===================== -->
-
-
-<section class="ending">
-
-
-<h2 class="reveal">
-
-From Data To Discovery
-
-</h2>
-
-
-<p class="research-question reveal">
-
-Gene expression analysis allows us to
-connect molecular changes with the
-development of colon cancer.
-
-</p>
-
-
-</section>
-
-
-
-
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>

@@ -2,782 +2,179 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-Algorithm - Gene Expression Analysis
-</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm - Gene Expression Analysis</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
-<body>
-
-
-
-<!-- MENU -->
+<body class="algorithm-page">
 
 <div id="menu" class="menu">
-
-
-<button id="closeMenu" class="close">
-✕
-</button>
-
-
-<h2>
-Explore
-</h2>
-
-
-<a href="index.html">
-Home
-</a>
-
-
-<a href="research.html">
-Research
-</a>
-
-
-<a href="algorithm.html">
-Algorithm
-</a>
-
-
-<a href="results.html">
-Results
-</a>
-
-
-<a href="conclusion.html">
-Conclusion
-</a>
-
-<a href="citations.html">
-        Citations
-    </a>
-
-
+    <button id="closeMenu" class="close">✕</button>
+    <h2>Explore</h2>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="algorithm.html">Algorithm</a>
+    <a href="results.html">Results</a>
+    <a href="conclusion.html">Conclusion</a>
+    <a href="citations.html">Citations</a>
 </div>
 
-
-
-<button id="menuButton" class="floating-menu">
-
-☰
-
-</button>
-
-
-
-
-
-
-<!-- =====================
-HEADER
-===================== -->
-
-
-<section class="hero-small">
-
-
-<h1 class="reveal">
-
-PART 2
-
-<br>
-
-ALGORITHM
-
-</h1>
-
-
-<p class="reveal center section-intro">
-
-Using computational methods to identify
-genes that change during colon cancer.
-
-</p>
-
-
-<h2 class="reveal">
-
-Our Dataset
-
-</h2>
-
-
-
-<p class="center reveal section-intro">
-
-We analyzed an Affymetrix microarray dataset
-containing gene expression measurements
-from healthy colon tissue and colon cancer
-samples.
-
-</p>
-
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Healthy Samples
-
-</h3>
-
-
-<p>
-
-Represent normal colon tissue and provide
-a baseline for gene activity.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Cancer Samples
-
-</h3>
-
-
-<p>
-
-Represent tumor tissue where gene
-regulation may have changed.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Thousands of Genes
-
-</h3>
-
-
-<p>
-
-Each sample contains expression values
-for thousands of genes.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
+<button id="menuButton" class="floating-menu">☰</button>
+
+<!-- PART HEADER -->
+<section class="chapter hero-small">
+    <h1 class="reveal">PART 2<br>ALGORITHM</h1>
+    <p class="reveal">Using computational methods to identify genes whose activity changes in colon cancer.</p>
 </section>
 
-
-
-
-
-
-
-
-
-<!-- =====================
-DATA PROCESSING
-===================== -->
-
-
+<!-- OVERVIEW AND DATASET -->
 <section>
-
-
-<h2 class="reveal">
-
-Preparing The Data
-
-</h2>
-
-
-
-
-<p class="center reveal section-intro">
-
-Before comparing samples, the raw
-microarray data must be processed.
-
-</p>
-
-
-
-
-
-<div class="pipeline">
-
-
-
-<div class="pipeline-step reveal">
-
-Raw Microarray Data
-
-<p>
-
-Expression measurements collected from
-each sample.
-
-</p>
-
-</div>
-
-
-
-
-<div class="pipeline-arrow">
-
-↓
-
-</div>
-
-
-
-
-<div class="pipeline-step reveal">
-
-Data Cleaning
-
-<p>
-
-Remove missing or invalid values and
-prepare the dataset for analysis.
-
-</p>
-
-</div>
-
-
-
-
-<div class="pipeline-arrow">
-
-↓
-
-</div>
-
-
-
-
-<div class="pipeline-step reveal">
-
-Normalization
-
-<p>
-
-Adjust measurements so samples can be
-accurately compared.
-
-</p>
-
-</div>
-
-
-
-<div class="pipeline-arrow">
-
-↓
-
-</div>
-
-
-
-
-<div class="pipeline-step reveal">
-
-Differential Expression Analysis
-
-<p>
-
-Identify genes with significant differences
-between healthy and cancer tissue.
-
-</p>
-
-</div>
-
-
-
-</div>
-
-
+    <p class="algorithm-kicker reveal">Section 1: Overview</p>
+    <h2 class="reveal">The Dataset — Raw CEL Files</h2>
+    <p class="center reveal algorithm-intro">
+        GSE44076 is a publicly available gene-expression dataset from the NCBI Gene Expression Omnibus. The data were collected from human colon tissues using the Affymetrix Human Genome U219 microarray platform.
+    </p>
+
+    <div class="dataset-summary reveal">
+        <p>Each CEL file represents one colon tissue sample and stores fluorescence-intensity measurements from thousands of DNA probes.</p>
+    </div>
+
+    <div class="algorithm-stat-grid">
+        <article class="algorithm-stat reveal">
+            <strong>50</strong>
+            <span>Healthy colon samples</span>
+        </article>
+        <article class="algorithm-stat reveal">
+            <strong>98</strong>
+            <span>Adjacent-normal samples</span>
+        </article>
+        <article class="algorithm-stat reveal">
+            <strong>98</strong>
+            <span>Colon tumor samples</span>
+        </article>
+    </div>
+
+    <p class="comparison-note reveal"><strong>Main comparison:</strong> 50 healthy samples versus 98 tumor samples.</p>
 </section>
 
-
-
-
-
-
-
-
-<!-- =====================
-DIFFERENTIAL EXPRESSION
-===================== -->
-
-
+<!-- LIMMA -->
 <section>
+    <h2 class="reveal">Limma — Differential Gene Expression Analysis</h2>
+    <p class="center reveal algorithm-intro">
+        Limma is a statistical method used to compare gene expression between two or more groups and highlight differences between them. In this project, it compares healthy tissue with colon cancer tissue using DNA microarray gene-expression data.
+    </p>
 
+    <div class="algorithm-card-grid">
+        <article class="algorithm-card reveal">
+            <h3>Log₂ Fold Change</h3>
+            <p>Measures how much a gene is upregulated or downregulated in cancer.</p>
+            <div class="formula">log₂(Average Cancer ÷ Average Healthy)</div>
+            <p>A positive value means upregulated in cancer; a negative value means downregulated.</p>
+        </article>
 
-<h2 class="reveal">
+        <article class="algorithm-card reveal">
+            <h3>P-value</h3>
+            <p>Estimates whether the observed difference between healthy and cancer samples is statistically significant.</p>
+        </article>
 
-Differential Gene Expression
+        <article class="algorithm-card reveal">
+            <h3>Adjusted P-value</h3>
+            <p>Accounts for testing thousands of genes simultaneously and helps control false discoveries. Genes with an adjusted p-value below 0.05 are commonly treated as significant.</p>
+        </article>
+    </div>
 
-</h2>
-
-
-
-
-<p class="center reveal">
-
-The goal of differential expression analysis
-is to determine which genes are expressed
-differently between two groups.
-
-</p>
-
-
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Fold Change
-
-</h3>
-
-
-<p>
-
-Measures how much gene expression
-increases or decreases between samples.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-p-value
-
-</h3>
-
-
-<p>
-
-Shows whether the observed difference
-is likely due to a real biological change.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Adjusted p-value
-
-</h3>
-
-
-<p>
-
-Corrects for testing thousands of genes
-at the same time.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
+    <h3 class="algorithm-subheading reveal">The Limma Process</h3>
+    <ol class="compact-process reveal">
+        <li>Normalize the expression data.</li>
+        <li>Fit a linear model for each gene.</li>
+        <li>Compare tumor and healthy samples.</li>
+        <li>Calculate log₂ fold change and statistical significance.</li>
+        <li>Output significantly upregulated and downregulated genes.</li>
+    </ol>
 </section>
 
-
-
-
-
-
-
-
-
-<!-- =====================
-LIMMA
-===================== -->
-
-
+<!-- CODE WORKFLOW -->
 <section>
+    <p class="algorithm-kicker reveal">Section 2: Workflow</p>
+    <h2 class="reveal">How Do We Simulate Limma Using Code?</h2>
+    <p class="center reveal algorithm-intro">The analysis moves from raw microarray files in R to visual summaries generated in Python.</p>
 
+    <div class="code-workflow">
+        <article class="workflow-stage reveal">
+            <span class="stage-number">1</span>
+            <div>
+                <h3>Input</h3>
+                <p>Load the GSE44076 microarray dataset containing gene-expression measurements from healthy and colon cancer samples.</p>
+            </div>
+        </article>
 
-<h2 class="reveal">
+        <div class="workflow-connector" aria-hidden="true">↓</div>
 
-Statistical Method: Limma
+        <article class="workflow-stage reveal">
+            <span class="stage-number">2</span>
+            <div>
+                <h3>Prepare the Data in R</h3>
+                <ul>
+                    <li>Load the raw microarray dataset.</li>
+                    <li>Remove control probes.</li>
+                    <li>Normalize expression data using RMA (Robust Multi-array Average).</li>
+                    <li>Correct background noise from the Affymetrix chips.</li>
+                    <li>Adjust fluorescence intensities between samples to reduce technical bias.</li>
+                    <li>Average probe measurements into expression values for each gene.</li>
+                </ul>
+            </div>
+        </article>
 
-</h2>
+        <div class="workflow-connector" aria-hidden="true">↓</div>
 
+        <article class="workflow-stage reveal">
+            <span class="stage-number">3</span>
+            <div>
+                <h3>Identify Differentially Expressed Genes</h3>
+                <p>Use Limma to compare healthy and cancer samples and calculate log₂ fold changes, p-values, and adjusted p-values.</p>
+            </div>
+        </article>
 
+        <div class="workflow-connector" aria-hidden="true">↓</div>
 
-
-<p class="center reveal">
-
-Limma (Linear Models for Microarray Data)
-uses statistical models to compare gene
-expression between groups.
-
-</p>
-
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-
-<h3>
-
-How Limma Works
-
-</h3>
-
-
-<p>
-
-For each gene, Limma compares expression
-levels between healthy and cancer samples
-and calculates whether the difference is
-statistically significant.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<p class="center reveal section-intro">
-
-Limma is useful because it can analyze
-thousands of genes while controlling for
-false discoveries.
-
-</p>
-
-
-
+        <article class="workflow-stage reveal">
+            <span class="stage-number">4</span>
+            <div>
+                <h3>Export to Python</h3>
+                <p>Save the Limma results as a CSV file, then read the output in Python to generate visualizations.</p>
+            </div>
+        </article>
+    </div>
 </section>
 
-
-
-
-
-
-
-
-
-<!-- =====================
-WELCH TEST
-===================== -->
-
-
+<!-- OUTPUTS -->
 <section>
+    <h2 class="reveal">Analysis Outputs</h2>
+    <p class="center reveal algorithm-intro">The processed results are transformed into three visual summaries.</p>
 
+    <div class="algorithm-card-grid output-grid">
+        <article class="algorithm-card reveal">
+            <h3>Volcano Plot</h3>
+            <p>Shows genes with significant expression changes by combining log₂ fold change and statistical significance.</p>
+        </article>
+        <article class="algorithm-card reveal">
+            <h3>Heatmap</h3>
+            <p>Uses Welch's t-test to select the top 50 genes and displays differences in gene activity between healthy and cancer samples.</p>
+        </article>
+        <article class="algorithm-card reveal">
+            <h3>PCoA</h3>
+            <p>Shows how samples group based on similarities and differences in their gene-expression patterns.</p>
+        </article>
+    </div>
 
-<h2 class="reveal">
-
-Statistical Method: Welch's t-test
-
-</h2>
-
-
-
-
-<p class="center reveal">
-
-Welch's t-test compares the average gene
-expression between two groups while
-allowing the groups to have different
-variability.
-
-</p>
-
-
-<div class="cards">
-
-<div class="card reveal">
-
-
-<h3>
-
-Why Use It?
-
-</h3>
-
-
-<p>
-
-It provides another method for identifying
-genes that may differ between healthy and
-cancer samples.
-
-</p>
-
-
-</div>
-
-</div>
-
-
-
+    <div class="page-navigation">
+        <a href="results.html" class="next-button">Continue to Results →</a>
+    </div>
 </section>
-
-
-
-
-
-
-
-
-
-<!-- =====================
-COMPARISON
-===================== -->
-
-
-<section>
-
-
-<h2 class="reveal">
-
-Comparing The Methods
-
-</h2>
-
-
-
-
-<div class="pipeline">
-
-
-<div class="pipeline-step reveal">
-
-Microarray Dataset
-
-</div>
-
-
-<div class="pipeline-arrow">
-
-↓
-
-</div>
-
-
-
-<div class="pipeline-step reveal">
-
-Normalization
-
-</div>
-
-
-<div class="pipeline-arrow">
-
-↓
-
-</div>
-
-
-
-<div class="pipeline-step reveal">
-
-Differential Expression Analysis
-
-</div>
-
-
-<div class="pipeline-arrow">
-
-↓
-
-</div>
-
-
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Limma
-
-</h3>
-
-
-<p>
-
-Linear model approach designed
-for high-throughput gene expression data.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card reveal">
-
-
-<h3>
-
-Welch's t-test
-
-</h3>
-
-
-<p>
-
-Direct statistical comparison between
-healthy and cancer groups.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="pipeline-arrow">
-
-↓
-
-</div>
-
-
-
-<div class="pipeline-step reveal">
-
-Identify Significant Genes
-
-</div>
-
-
-
-</div>
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- =====================
-TRANSITION
-===================== -->
-
-
-<section class="ending">
-
-
-<h2 class="reveal">
-
-What Did We Find?
-
-</h2>
-
-
-<p class="research-question reveal">
-
-The results of these analyses reveal
-which genes show the largest differences
-between healthy and cancer tissue.
-
-</p>
-
-
-
-</section>
-
-
-
-
-
-
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Results - Gene Expression Analysis
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+
+<!-- MENU -->
+
+<div id="menu" class="menu">
+
+
+<button id="closeMenu" class="close">
+✕
+</button>
+
+
+<h2>
+Explore
+</h2>
+
+
+<a href="index.html">
+Home
+</a>
+
+
+<a href="research.html">
+Research
+</a>
+
+
+<a href="algorithm.html">
+Algorithm
+</a>
+
+
+<a href="results.html">
+Results
+</a>
+
+
+<a href="conclusion.html">
+Conclusion
+</a>
+
+
+</div>
+
+
+
+<button id="menuButton" class="floating-menu">
+
+☰
+
+</button>
+
+
+
+
+
+
+
+<!-- =====================
+HEADER
+===================== -->
+
+
+<section class="hero-small">
+
+
+<h1 class="reveal">
+
+PART 3
+
+<br>
+
+RESULTS
+
+</h1>
+
+
+<p class="reveal center section-intro">
+
+Finding genes that change between
+healthy and colon cancer tissue.
+
+</p>
+
+
+<h2 class="reveal secti">
+
+What Did We Find?
+
+</h2>
+
+
+
+<p class="center reveal">
+
+Our analysis identified genes with
+significantly different expression levels
+between healthy and cancer samples.
+
+</p>
+
+
+
+<p class="center reveal section-intro">
+
+Genes with increased activity may be
+involved in cancer development, while
+genes with decreased activity may reveal
+changes in normal cell functions.
+
+</p>
+
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Increased Expression
+
+</h3>
+
+
+<p>
+
+Genes that are more active in cancer
+samples compared with healthy tissue.
+
+</p>
+
+
+</div>
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Decreased Expression
+
+</h3>
+
+
+<p>
+
+Genes that are less active in cancer
+samples.
+
+</p>
+
+
+</div>
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Significant Genes
+
+</h3>
+
+
+<p>
+
+Genes with large expression changes
+and strong statistical evidence.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+VOLCANO PLOT EXPLANATION
+===================== -->
+// ALL GRAPHS W/ TINY EXPLINATION, FULL EXPLINATION LATER
+
+<section>
+
+
+<h2 class="reveal">
+
+Understanding Volcano Plots
+
+</h2>
+
+
+
+
+<p class="center reveal">
+
+Volcano plots show the relationship
+between the amount of gene expression
+change and statistical significance.
+
+</p>
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Log₂ Fold Change
+
+</h3>
+
+
+<p>
+
+Shows how much a gene's expression
+increased or decreased.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+p-value
+
+</h3>
+
+
+<p>
+
+Shows how likely the observed difference
+is due to chance.
+
+</p>
+
+
+</div>
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Important Genes
+
+</h3>
+
+
+<p>
+
+Genes far from the center represent the
+largest and most significant changes.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+LIMMA RESULTS
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Limma Results
+
+</h2>
+
+
+
+
+<p class="center reveal">
+
+Limma identified genes that showed
+significant differences between healthy
+and cancer samples.
+
+</p>
+
+
+
+<img 
+class="reveal"
+src="images/limma_volcano.png"
+alt="Limma Volcano Plot"
+>
+
+
+
+<p class="center reveal">
+
+Volcano plot showing statistically
+significant genes identified by Limma.
+
+</p>
+
+
+
+
+<img
+class="reveal"
+src="images/limma_heatmap.png"
+alt="Limma Heatmap"
+>
+
+
+
+<p class="center reveal">
+
+Heatmap showing patterns of gene
+expression across samples.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+WELCH RESULTS
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Welch's t-test Results
+
+</h2>
+
+
+
+<p class="center reveal">
+
+Welch's t-test provided another approach
+for identifying genes that differ between
+healthy and cancer tissue.
+
+</p>
+
+
+
+
+<img
+class="reveal"
+src="images/ttest_volcano.png"
+alt="Welch Volcano Plot"
+>
+
+
+
+<p class="center reveal">
+
+Genes with large fold changes and low
+p-values represent potential biological
+differences.
+
+</p>
+
+
+
+
+<img
+class="reveal"
+src="images/ttest_heatmap.png"
+alt="Welch Heatmap"
+>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+BIOLOGICAL MEANING
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Why Do These Results Matter?
+
+</h2>
+
+
+
+
+<p class="center reveal">
+
+Changes in gene expression can reveal
+which biological processes are disrupted
+during cancer development.
+
+</p>
+
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Cancer Pathways
+
+</h3>
+
+
+<p>
+
+Differentially expressed genes can reveal
+pathways involved in tumor growth and
+cell regulation.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Biomarkers
+
+</h3>
+
+
+<p>
+
+Some genes may become useful markers
+for detecting or studying cancer.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Future Treatments
+
+</h3>
+
+
+<p>
+
+Gene expression patterns may help
+identify possible targets for new drugs.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+REAL WORLD USE
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Real-World Applications
+
+</h2>
+
+
+
+<p class="center reveal">
+
+Gene expression analysis is not meant to
+replace current cancer screening methods.
+
+</p>
+
+
+
+
+<p class="center reveal">
+
+Instead, after diagnosis, it can help
+doctors better understand tumors,
+predict behavior, and select treatment
+options.
+
+</p>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Personalized Oncology
+
+</h3>
+
+
+<p>
+
+Microarray analysis can help identify
+tumor characteristics and support
+personalized treatment decisions.
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+END
+===================== -->
+
+
+<section class="ending">
+
+
+<h2 class="reveal">
+
+From Data To Discovery
+
+</h2>
+
+
+<p class="research-question reveal">
+
+Gene expression analysis allows us to
+connect molecular changes with the
+development of colon cancer.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

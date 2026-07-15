@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Gene Expression and Colon Cancer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="research-page">
+
+    <!-- MENU -->
+    <div id="menu" class="menu">
+        <button id="closeMenu" class="close">✕</button>
+        <h2>Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="algorithm.html">Algorithm</a>
+        <a href="results.html">Results</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="citations.html">Citations</a>
+    </div>
+
+    <button id="menuButton" class="floating-menu">☰</button>
+
+    <!-- =====================
+    PART HEADER
+    ===================== -->
+    <section class="chapter hero-small dark-section">
+        <div class="section-inner">
+            <p class="eyebrow reveal">PART 1</p>
+            <h1 class="reveal">Research</h1>
+            <p class="reveal">Understanding colon cancer biology and how gene expression is measured.</p>
+        </div>
+    </section>
+
+    <!-- =====================
+    WHY DOES THIS MATTER
+    ===================== -->
+    <section class="light-section">
+        <div class="section-inner">
+            <div class="section-head reveal">
+                <h2>Why Does This Matter?</h2>
+                <p class="center">Colorectal cancer is the third most common cancer worldwide and the second leading cause of cancer death. Early-stage disease may produce few or no symptoms, so early detection generally provides more treatment options.</p>
+            </div>
+
+            <div class="stats reveal">
+                <div class="stat">
+                    <h3>1.9M+</h3>
+                    <p>New cases worldwide in 2022</p>
+                </div>
+                <div class="stat">
+                    <h3>900K+</h3>
+                    <p>Deaths worldwide in 2022</p>
+                </div>
+                <div class="stat">
+                    <h3>#2</h3>
+                    <p>Leading cause of cancer death</p>
+                </div>
+            </div>
+
+            <div class="info-panel reveal">
+                <div class="panel-tabs" role="tablist" aria-label="Colon cancer information tabs">
+                    <button type="button" class="panel-tab active" data-panel="risk" aria-selected="true" aria-controls="panel-risk">Risk Factors</button>
+                    <button type="button" class="panel-tab" data-panel="symptoms" aria-selected="false" aria-controls="panel-symptoms">Possible Symptoms</button>
+                    <button type="button" class="panel-tab" data-panel="screening" aria-selected="false" aria-controls="panel-screening">Screening &amp; Treatment</button>
+                </div>
+                <div class="panel-content">
+                    <div id="panel-risk" class="panel-pane active" role="tabpanel">
+                        <ul>
+                            <li>Age is the main risk factor, although younger people can also be affected.</li>
+                            <li>A family history of colorectal cancer increases risk.</li>
+                            <li>Diet, obesity, and physical inactivity are associated with higher risk.</li>
+                        </ul>
+                    </div>
+                    <div id="panel-symptoms" class="panel-pane" role="tabpanel" hidden>
+                        <ul>
+                            <li>Early-stage disease may produce few or no symptoms.</li>
+                            <li>Changes in bowel habits and blood in stool are common warning signs.</li>
+                            <li>General symptoms can include abdominal discomfort, fatigue, and iron deficiency.</li>
+                        </ul>
+                    </div>
+                    <div id="panel-screening" class="panel-pane" role="tabpanel" hidden>
+                        <ul>
+                            <li>Standard screening options include stool-based tests, colonoscopy, sigmoidoscopy, stool DNA testing, and CT colonography.</li>
+                            <li>Early detection generally provides more treatment options and better outcomes.</li>
+                            <li>Treatment depends on disease location and stage and may include surgery, chemotherapy, targeted therapy, immunotherapy, or radiation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p class="source-note reveal">Source: <a href="https://www.who.int/news-room/fact-sheets/detail/colorectal-cancer" target="_blank" rel="noopener noreferrer">WHO colorectal cancer fact sheet</a></p>
+        </div>
+    </section>
+
+    <!-- =====================
+    BIOLOGICAL TRANSITION
+    ===================== -->
+    <section class="dark-section">
+        <div class="section-inner">
+            <div class="transition-head reveal">
+                <h2>From mutations to tumor development</h2>
+                <p class="center">Colon cancer develops when genetic and epigenetic changes disrupt the systems that normally control cell division, DNA repair, and programmed cell death. These changes can alter gene expression, causing some genes to produce too much mRNA and others too little. The resulting changes in protein levels can allow damaged cells to survive, divide, and form tumors.</p>
+            </div>
+
+            <div class="transition-flow reveal" aria-label="Colon cancer progression flow">
+                <div class="flow-step">DNA mutations or epigenetic changes</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">Altered gene regulation</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">Too much or too little mRNA</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">Altered protein levels</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">Changes in cell growth and survival</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">Tumor development</div>
+            </div>
+
+            <p class="note reveal">Gene-expression analysis identifies changes associated with tumor tissue, but it does not by itself prove causation. It is useful for studying tumor biology and identifying candidate biomarkers or pathways, not as a replacement for standard colorectal-cancer screening.</p>
+        </div>
+    </section>
+
+    <!-- =====================
+    WHAT IS GENE EXPRESSION
+    ===================== -->
+    <section class="light-section">
+        <div class="section-inner">
+            <div class="section-head reveal">
+                <h2>What is gene expression?</h2>
+                <p class="center">Most cells in the human body contain nearly the same DNA, but different cells express different genes, allowing them to perform specialized functions.</p>
+            </div>
+
+            <div class="gene-grid">
+                <div class="gene-flow reveal" role="tablist" aria-label="Gene expression stages">
+                    <button type="button" class="stage-card active" data-stage="dna" aria-pressed="true">DNA<span>Gene instructions</span></button>
+                    <div class="stage-arrow">→</div>
+                    <button type="button" class="stage-card" data-stage="transcription" aria-pressed="false">Transcription<span>Copying DNA to mRNA</span></button>
+                    <div class="stage-arrow">→</div>
+                    <button type="button" class="stage-card" data-stage="mrna" aria-pressed="false">mRNA<span>Messenger RNA</span></button>
+                    <div class="stage-arrow">→</div>
+                    <button type="button" class="stage-card" data-stage="translation" aria-pressed="false">Translation<span>mRNA to protein</span></button>
+                    <div class="stage-arrow">→</div>
+                    <button type="button" class="stage-card" data-stage="protein" aria-pressed="false">Protein<span>Functional molecule</span></button>
+                    <div class="stage-arrow">→</div>
+                    <button type="button" class="stage-card" data-stage="behavior" aria-pressed="false">Cell Behavior<span>Growth and function</span></button>
+                </div>
+
+                <div class="gene-detail-card reveal">
+                    <h3 id="stageTitle">DNA</h3>
+                    <p id="stageText">Genes are sections of DNA that contain instructions for producing functional RNA or proteins. When a protein-coding gene is expressed, its DNA sequence is transcribed into mRNA, which can then be translated into protein.</p>
+                </div>
+            </div>
+
+            <div class="expression-demo reveal">
+                <div class="demo-header">
+                    <h3>Expression-level demonstration</h3>
+                    <p>Use the slider to see how higher or lower gene activity affects mRNA and protein levels.</p>
+                </div>
+                <div class="expression-display">
+                    <div class="expression-row">
+                        <span>mRNA</span>
+                        <div class="bar-track"><div class="bar-fill" id="mrnaBar"></div></div>
+                        <span id="mrnaValue">60%</span>
+                    </div>
+                    <div class="expression-row">
+                        <span>Protein</span>
+                        <div class="bar-track"><div class="bar-fill" id="proteinBar"></div></div>
+                        <span id="proteinValue">45%</span>
+                    </div>
+                </div>
+                <input type="range" id="expressionSlider" min="20" max="100" value="60" aria-label="Adjust expression level">
+                <p class="caption">This project measures mRNA abundance as a proxy for gene activity. Higher expression generally means more mRNA and more protein.</p>
+            </div>
+
+            <div class="expression-summary reveal">
+                <div class="expression-note"><strong>Higher gene expression</strong> → more mRNA produced</div>
+                <div class="expression-note"><strong>Lower gene expression</strong> → less mRNA produced</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+    MICROARRAY SECTION
+    ===================== -->
+    <section class="pale-section">
+        <div class="section-inner">
+            <div class="section-head reveal">
+                <h2>How do we measure gene expression?</h2>
+                <p class="center">A DNA microarray is a laboratory technology that measures the expression levels of thousands of known genes in the same experiment. The chip contains thousands of DNA probes. Labeled molecules prepared from the sample bind to complementary probes, and the measured signal provides an estimate of how much corresponding RNA was present.</p>
+            </div>
+
+            <div class="microarray-section">
+                <div class="microarray-timeline reveal" role="tablist" aria-label="Microarray assay steps">
+                    <button type="button" class="microarray-step active" data-step="samples" aria-selected="true" aria-controls="micro-step-text">Collect samples</button>
+                    <button type="button" class="microarray-step" data-step="rna" aria-selected="false" aria-controls="micro-step-text">Extract RNA</button>
+                    <button type="button" class="microarray-step" data-step="prep" aria-selected="false" aria-controls="micro-step-text">Prepare labeled material</button>
+                    <button type="button" class="microarray-step" data-step="hybridize" aria-selected="false" aria-controls="micro-step-text">Hybridize to probes</button>
+                    <button type="button" class="microarray-step" data-step="scan" aria-selected="false" aria-controls="micro-step-text">Scan intensity</button>
+                    <button type="button" class="microarray-step" data-step="analysis" aria-selected="false" aria-controls="micro-step-text">Analyze data</button>
+                </div>
+
+                <div class="microarray-detail reveal">
+                    <h3 id="micro-step-title">Collect biological samples</h3>
+                    <p id="micro-step-text">Healthy and tumor tissue samples are collected so their gene activity can be compared.</p>
+                    <div class="microarray-visual" aria-hidden="true">
+                        <div class="chip"></div>
+                        <div class="signal-label">Microarray signal pattern</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="microarray-summary reveal">
+                <p>By comparing expression values between healthy and tumor samples, researchers can identify genes that are expressed at higher or lower levels in cancer. This may help identify candidate biomarkers, genes and pathways associated with cancer biology, and directions for future therapeutic research.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+    RESEARCH QUESTION
+    ===================== -->
+    <section class="dark-section ending">
+        <div class="section-inner">
+            <h2 class="reveal">Research Question</h2>
+            <p class="research-question reveal">Which genes are expressed differently in colon cancer compared with healthy colon tissue?</p>
+            <p class="center reveal">To answer this question, we analyze a public DNA microarray dataset and statistically compare gene-expression values from healthy and tumor samples.</p>
+            <div class="page-navigation reveal">
+                <a href="algorithm.html" class="next-button">Continue to Part 2: Algorithm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+    BIBLIOGRAPHY
+    ===================== -->
+    <footer class="bibliography">
+        <div class="section-inner">
+            <h3>Sources</h3>
+            <ul>
+                <li><a href="https://www.who.int/news-room/fact-sheets/detail/colorectal-cancer" target="_blank" rel="noopener noreferrer">WHO colorectal cancer fact sheet</a></li>
+                <li><a href="https://www.science.org/doi/10.1126/science.7545951" target="_blank" rel="noopener noreferrer">Schena et al. (1995), Quantitative Monitoring of Gene Expression Patterns with a Complementary DNA Microarray</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/geo/" target="_blank" rel="noopener noreferrer">NCBI GEO public gene-expression data</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
