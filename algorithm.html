@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Algorithm - Gene Expression Analysis
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+
+<!-- MENU -->
+
+<div id="menu" class="menu">
+
+
+<button id="closeMenu" class="close">
+✕
+</button>
+
+
+<h2>
+Explore
+</h2>
+
+
+<a href="index.html">
+Home
+</a>
+
+
+<a href="research.html">
+Research
+</a>
+
+
+<a href="algorithm.html">
+Algorithm
+</a>
+
+
+<a href="results.html">
+Results
+</a>
+
+
+<a href="conclusion.html">
+Conclusion
+</a>
+
+
+</div>
+
+
+
+<button id="menuButton" class="floating-menu">
+
+☰
+
+</button>
+
+
+
+
+
+
+<!-- =====================
+HEADER
+===================== -->
+
+
+<section class="hero-small">
+
+
+<h1 class="reveal">
+
+PART 2
+
+<br>
+
+ALGORITHM
+
+</h1>
+
+
+<p class="reveal center section-intro">
+
+Using computational methods to identify
+genes that change during colon cancer.
+
+</p>
+
+
+<h2 class="reveal">
+
+Our Dataset
+
+</h2>
+
+
+
+<p class="center reveal section-intro">
+
+We analyzed an Affymetrix microarray dataset
+containing gene expression measurements
+from healthy colon tissue and colon cancer
+samples.
+
+</p>
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Healthy Samples
+
+</h3>
+
+
+<p>
+
+Represent normal colon tissue and provide
+a baseline for gene activity.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Cancer Samples
+
+</h3>
+
+
+<p>
+
+Represent tumor tissue where gene
+regulation may have changed.
+
+</p>
+
+
+</div>
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Thousands of Genes
+
+</h3>
+
+
+<p>
+
+Each sample contains expression values
+for thousands of genes.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+DATA PROCESSING
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Preparing The Data
+
+</h2>
+
+
+
+
+<p class="center reveal section-intro">
+
+Before comparing samples, the raw
+microarray data must be processed.
+
+</p>
+
+
+
+
+
+<div class="pipeline">
+
+
+
+<div class="pipeline-step reveal">
+
+Raw Microarray Data
+
+<p>
+
+Expression measurements collected from
+each sample.
+
+</p>
+
+</div>
+
+
+
+
+<div class="pipeline-arrow">
+
+↓
+
+</div>
+
+
+
+
+<div class="pipeline-step reveal">
+
+Data Cleaning
+
+<p>
+
+Remove missing or invalid values and
+prepare the dataset for analysis.
+
+</p>
+
+</div>
+
+
+
+
+<div class="pipeline-arrow">
+
+↓
+
+</div>
+
+
+
+
+<div class="pipeline-step reveal">
+
+Normalization
+
+<p>
+
+Adjust measurements so samples can be
+accurately compared.
+
+</p>
+
+</div>
+
+
+
+<div class="pipeline-arrow">
+
+↓
+
+</div>
+
+
+
+
+<div class="pipeline-step reveal">
+
+Differential Expression Analysis
+
+<p>
+
+Identify genes with significant differences
+between healthy and cancer tissue.
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+DIFFERENTIAL EXPRESSION
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Differential Gene Expression
+
+</h2>
+
+
+
+
+<p class="center reveal">
+
+The goal of differential expression analysis
+is to determine which genes are expressed
+differently between two groups.
+
+</p>
+
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Fold Change
+
+</h3>
+
+
+<p>
+
+Measures how much gene expression
+increases or decreases between samples.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+p-value
+
+</h3>
+
+
+<p>
+
+Shows whether the observed difference
+is likely due to a real biological change.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Adjusted p-value
+
+</h3>
+
+
+<p>
+
+Corrects for testing thousands of genes
+at the same time.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+LIMMA
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Statistical Method: Limma
+
+</h2>
+
+
+
+
+<p class="center reveal">
+
+Limma (Linear Models for Microarray Data)
+uses statistical models to compare gene
+expression between groups.
+
+</p>
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+
+<h3>
+
+How Limma Works
+
+</h3>
+
+
+<p>
+
+For each gene, Limma compares expression
+levels between healthy and cancer samples
+and calculates whether the difference is
+statistically significant.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<p class="center reveal section-intro">
+
+Limma is useful because it can analyze
+thousands of genes while controlling for
+false discoveries.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+WELCH TEST
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Statistical Method: Welch's t-test
+
+</h2>
+
+
+
+
+<p class="center reveal">
+
+Welch's t-test compares the average gene
+expression between two groups while
+allowing the groups to have different
+variability.
+
+</p>
+
+
+<div class="cards">
+
+<div class="card reveal">
+
+
+<h3>
+
+Why Use It?
+
+</h3>
+
+
+<p>
+
+It provides another method for identifying
+genes that may differ between healthy and
+cancer samples.
+
+</p>
+
+
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+COMPARISON
+===================== -->
+
+
+<section>
+
+
+<h2 class="reveal">
+
+Comparing The Methods
+
+</h2>
+
+
+
+
+<div class="pipeline">
+
+
+<div class="pipeline-step reveal">
+
+Microarray Dataset
+
+</div>
+
+
+<div class="pipeline-arrow">
+
+↓
+
+</div>
+
+
+
+<div class="pipeline-step reveal">
+
+Normalization
+
+</div>
+
+
+<div class="pipeline-arrow">
+
+↓
+
+</div>
+
+
+
+<div class="pipeline-step reveal">
+
+Differential Expression Analysis
+
+</div>
+
+
+<div class="pipeline-arrow">
+
+↓
+
+</div>
+
+
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Limma
+
+</h3>
+
+
+<p>
+
+Linear model approach designed
+for high-throughput gene expression data.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card reveal">
+
+
+<h3>
+
+Welch's t-test
+
+</h3>
+
+
+<p>
+
+Direct statistical comparison between
+healthy and cancer groups.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="pipeline-arrow">
+
+↓
+
+</div>
+
+
+
+<div class="pipeline-step reveal">
+
+Identify Significant Genes
+
+</div>
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+TRANSITION
+===================== -->
+
+
+<section class="ending">
+
+
+<h2 class="reveal">
+
+What Did We Find?
+
+</h2>
+
+
+<p class="research-question reveal">
+
+The results of these analyses reveal
+which genes show the largest differences
+between healthy and cancer tissue.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
