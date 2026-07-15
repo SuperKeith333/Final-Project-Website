@@ -2123,3 +2123,28 @@ section > h2 {
         padding: 22px;
     }
 }
+<<<<<<< HEAD
+=======
+
+
+.authors {
+
+    margin:30px auto;
+
+    text-align:center;
+
+}
+
+
+.authors p {
+
+    display:inline;
+
+    margin:0 15px;
+
+    font-size:1.2rem;
+
+    color:#c0e6fd;
+
+}
+>>>>>>> b8f5573 (Almost Final Update)
